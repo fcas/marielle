@@ -4,7 +4,7 @@
 
 # Marielle
 
-Marielle é um projeto com o objetivo de contribuir com as metas 5 (igualdade de gênero), 10 (redução das desigualdades) e 16(Paz, Justiça e Instituições Eficazes) da [Agenda da ONU 2030](https://nacoesunidas.org/pos2015/agenda2030/), por meio do combate a violência.
+Marielle é um projeto com o objetivo de contribuir com as metas 5 (igualdade de gênero), 10 (redução das desigualdades) e 16 (Paz, Justiça e Instituições Eficazes) da [Agenda da ONU 2030](https://nacoesunidas.org/pos2015/agenda2030/), por meio do combate a violência.
 
 Funcionalidades a serem desenvolvidas:
 - Geolocalização de redes de apoio a pessoas vítimas de violência
