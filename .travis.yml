@@ -6,3 +6,5 @@ rvm:
 before_install:
   - sudo apt-get update
   - sudo apt-get install -y postgresql postgresql-contrib
+  - rvm install 2.7.1
+  - rvm use 2.7.1
