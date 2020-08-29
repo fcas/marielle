@@ -3,11 +3,11 @@
 [![Test Coverage](https://api.codeclimate.com/v1/badges/34eb75f7b9dcb213765d/test_coverage)](https://codeclimate.com/github/fcas/marielle/test_coverage)
 [![GitHub](https://img.shields.io/github/license/fcas/marielle)](LICENSE)
 
-# Marielle
+# Marielle (o nome do projeto ainda está em discussão, esse é um nome provisório)
 
 Marielle é um projeto com o objetivo de contribuir com as metas 5 (igualdade de gênero), 10 (redução das desigualdades) e 16 (Paz, Justiça e Instituições Eficazes) da [Agenda da ONU 2030](https://nacoesunidas.org/pos2015/agenda2030/), por meio do combate a violência.
 
-Funcionalidades a serem desenvolvidas:
+Funcionalidades a serem desenvolvidas (ainda estão em discussão e sujeitas a modificação):
 - Geolocalização de redes de apoio a pessoas vítimas de violência
 - Geolocalização de grupos de reflexão sobre masculinidade
 - Geolocalização de vizinhanças solidárias
