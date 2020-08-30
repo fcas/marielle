@@ -20,7 +20,7 @@ https://mariellle.herokuapp.com
 
 ## Colaboradores
 
-- [Diego Vieira Neves](https://github.com/xdiegoneves) (USP-EACH-SIN5005)
+- [Diego Neves](https://github.com/xdiegoneves) (USP-EACH-SIN5005)
 - [Felipe Cordeiro Alves Dias](https://github.com/fcas) (USP-EACH-SIN5005)
 - [Laísa Dias Brito Alves](https://github.com/laisacavazotto) (Community - UX Designer)
 - [Leonardo Colman Lopes](https://github.com/LeoColman) (USP-EACH-SIN5005)
