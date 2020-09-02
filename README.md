@@ -23,4 +23,5 @@ https://mariellle.herokuapp.com
 - [Diego Neves](https://github.com/xdiegoneves) (USP-EACH-SIN5005)
 - [Felipe Cordeiro Alves Dias](https://github.com/fcas) (USP-EACH-SIN5005)
 - [Laísa Dias Brito Alves](https://github.com/laisacavazotto) (Community - UX Designer)
+- [Larissa Mangolim Amaral](https://github.com/sadlune) (USP-EACH-SIN5005)
 - [Leonardo Colman Lopes](https://github.com/LeoColman) (USP-EACH-SIN5005)
