@@ -1,6 +1,6 @@
 language: ruby
 rvm:
-  - 2.6.3
+  - 2.7.1
   - jruby
 
 services:
@@ -13,5 +13,5 @@ before_script:
   - psql -c 'create database production;' -U postgres
 
 before_install:
-  - rvm install 2.6.3
-  - rvm use 2.6.3
+  - rvm install 2.7.1
+  - rvm use 2.7.1
