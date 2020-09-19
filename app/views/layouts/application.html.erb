@@ -10,6 +10,16 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header>
+      <ul>
+        <li><a href="/">Logo Marielle</a></li>
+        <li><a href="/reports/show">Relatorios</a></li>
+        <li><a href="/reports/new">Reportar</a></li>
+      </ul>
+    </header>
+    <main>
+      <%= yield %>
+    </main>
+    <footer></footer>
   </body>
 </html>
