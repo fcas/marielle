@@ -1,14 +1,22 @@
-<h3>Reportar</h3>
-<%= form_with scope: :report, url: reports_path, local: true do |form| %>
-  <div>
-    <%= form.label :date %>
-    <%= form.text_field :date %>
+<div class="form">
+  <div class="form-header">
+    <h1>Reportar</h1>
   </div>
-  <div>
-    <%= form.label :cep %>
-    <%= form.text_field :cep %>
+  <div class="form-content">
+    <%= form_with scope: :report, url: reports_path, local: true do |form| %>
+      <ul class="flex-outer">
+        <li class="form-field">
+          <%= form.label :date %>
+          <%= form.text_field :date %>
+        </li>
+        <li class="form-field">
+          <%= form.label :cep %>
+          <%= form.text_field :cep %>
+        </li>
+        <li class="form-submit">
+          <%= form.submit 'Prosseguir' %>
+        </li>
+      </ul>
+    <% end %>
   </div>
-  <div>
-    <%= form.submit 'Prosseguir' %>
-  </div>
-<% end %>
+</div>

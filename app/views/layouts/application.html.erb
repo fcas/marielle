@@ -11,13 +11,18 @@
 
   <body>
     <header>
-      <ul>
-        <li><a href="/">Logo Marielle</a></li>
-        <li><a href="/reports/show">Relatorios</a></li>
-        <li><a href="/reports/new">Reportar</a></li>
-      </ul>
+      
     </header>
     <main>
+      <ul class="nav">
+        <li><a href="/">Logo Marielle</a></li>
+        <li><a href="/reports/show">
+          <img class="icon" src=" <%= asset_path('address-card.svg') %>"/>Relatorios</a>
+        </li>
+        <li><a href="/reports/new">
+          <img class="icon" src=" <%= asset_path('plus-square.svg') %>"/>Reportar</a>
+        </li>
+      </ul>
       <%= yield %>
     </main>
     <footer></footer>
