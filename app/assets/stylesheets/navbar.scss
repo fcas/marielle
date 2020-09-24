@@ -1,0 +1,26 @@
+@import "variables.scss";
+
+ul.nav {
+    height: 100%;
+    background-color: $lightColor;
+    margin-right: 1rem;
+    border-right: 1px solid $highlightColor;
+}
+
+ul.nav li {
+    color: $highlightColor;
+    font-size: $fontSize;
+}
+
+ul.nav li:first-child:hover {
+    background-color: $lightColor;
+}
+
+ul.nav li:hover {
+    background-color: $secondaryColor;
+}
+
+ul.nav li a {
+    display: block;
+    padding: 1.5rem 3rem 1.5rem 2rem;
+}
