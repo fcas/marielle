@@ -1,0 +1,2 @@
+class RawRegistrosOcorrenciasSspSpGovBr < ApplicationRecord
+end
