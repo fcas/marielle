@@ -1,139 +1,136 @@
 <p id="notice"><%= notice %></p>
-
 <h1>Raw Registros Ocorrencias Ssp Sp Gov Brs</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Ano bo</th>
-      <th>Num bo</th>
-      <th>Numero boletim</th>
-      <th>Bo iniciado</th>
-      <th>Bo emitido</th>
-      <th>Dataocorrencia</th>
-      <th>Horaocorrencia</th>
-      <th>Peridoocorrencia</th>
-      <th>Datacomunicacao</th>
-      <th>Dataelaboracao</th>
-      <th>Bo autoria</th>
-      <th>Flagrante</th>
-      <th>Numero boletim principal</th>
-      <th>Logradouro</th>
-      <th>Numero</th>
-      <th>Bairro</th>
-      <th>Cidade</th>
-      <th>Uf</th>
-      <th>Latitude</th>
-      <th>Longitude</th>
-      <th>Descricaolocal</th>
-      <th>Exame</th>
-      <th>Solucao</th>
-      <th>Delegacia nome</th>
-      <th>Delegacia circunscricao</th>
-      <th>Especie</th>
-      <th>Rubrica</th>
-      <th>Desdobramento</th>
-      <th>Status</th>
-      <th>Nomepessoa</th>
-      <th>Tipopessoa</th>
-      <th>Vitimafatal</th>
-      <th>Rg</th>
-      <th>Rg uf</th>
-      <th>Naturalidade</th>
-      <th>Nacionalidade</th>
-      <th>Sexo</th>
-      <th>Datanascimento</th>
-      <th>Idade</th>
-      <th>Estadocivil</th>
-      <th>Profissao</th>
-      <th>Grauinstrucao</th>
-      <th>Corcutis</th>
-      <th>Naturezavinculada</th>
-      <th>Tipovinculo</th>
-      <th>Relacionamento</th>
-      <th>Parentesco</th>
-      <th>Placa veiculo</th>
-      <th>Uf veiculo</th>
-      <th>Cidade veiculo</th>
-      <th>Descr cor veiculo</th>
-      <th>Descr marca veiculo</th>
-      <th>Ano fabricacao</th>
-      <th>Ano modelo</th>
-      <th>Descr tipo veiculo</th>
-      <th>Quant celular</th>
-      <th>Marca celular</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<div class="table">
 
-  <tbody>
-    <% @raw_registros_ocorrencias_ssp_sp_gov_brs.each do |raw_registros_ocorrencias_ssp_sp_gov_br| %>
+  <%= link_to 'NOVO REGISTRO', new_raw_registros_ocorrencias_ssp_sp_gov_br_path, class: "btn"%>
+
+  <table>
+    <thead>
       <tr>
-        <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.ano_bo %></td>
-        <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.num_bo %></td>
-        <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.numero_boletim %></td>
-        <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.bo_iniciado %></td>
-        <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.bo_emitido %></td>
-        <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.dataocorrencia %></td>
-        <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.horaocorrencia %></td>
-        <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.peridoocorrencia %></td>
-        <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.datacomunicacao %></td>
-        <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.dataelaboracao %></td>
-        <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.bo_autoria %></td>
-        <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.flagrante %></td>
-        <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.numero_boletim_principal %></td>
-        <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.logradouro %></td>
-        <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.numero %></td>
-        <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.bairro %></td>
-        <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.cidade %></td>
-        <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.uf %></td>
-        <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.latitude %></td>
-        <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.longitude %></td>
-        <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.descricaolocal %></td>
-        <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.exame %></td>
-        <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.solucao %></td>
-        <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.delegacia_nome %></td>
-        <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.delegacia_circunscricao %></td>
-        <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.especie %></td>
-        <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.rubrica %></td>
-        <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.desdobramento %></td>
-        <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.status %></td>
-        <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.nomepessoa %></td>
-        <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.tipopessoa %></td>
-        <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.vitimafatal %></td>
-        <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.rg %></td>
-        <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.rg_uf %></td>
-        <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.naturalidade %></td>
-        <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.nacionalidade %></td>
-        <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.sexo %></td>
-        <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.datanascimento %></td>
-        <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.idade %></td>
-        <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.estadocivil %></td>
-        <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.profissao %></td>
-        <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.grauinstrucao %></td>
-        <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.corcutis %></td>
-        <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.naturezavinculada %></td>
-        <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.tipovinculo %></td>
-        <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.relacionamento %></td>
-        <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.parentesco %></td>
-        <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.placa_veiculo %></td>
-        <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.uf_veiculo %></td>
-        <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.cidade_veiculo %></td>
-        <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.descr_cor_veiculo %></td>
-        <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.descr_marca_veiculo %></td>
-        <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.ano_fabricacao %></td>
-        <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.ano_modelo %></td>
-        <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.descr_tipo_veiculo %></td>
-        <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.quant_celular %></td>
-        <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.marca_celular %></td>
-        <td><%= link_to 'Show', raw_registros_ocorrencias_ssp_sp_gov_br %></td>
-        <td><%= link_to 'Edit', edit_raw_registros_ocorrencias_ssp_sp_gov_br_path(raw_registros_ocorrencias_ssp_sp_gov_br) %></td>
-        <td><%= link_to 'Destroy', raw_registros_ocorrencias_ssp_sp_gov_br, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Ano BO</th>
+        <th>Num BO</th>
+        <th>Numero boletim</th><!--
+        <th>Bo iniciado</th>
+        <th>Bo emitido</th>-->
+        <th>Data ocorrencia</th><!--
+        <th>Horaocorrencia</th>
+        <th>Peridoocorrencia</th>
+        <th>Datacomunicacao</th>
+        <th>Dataelaboracao</th>
+        <th>Bo autoria</th>
+        <th>Flagrante</th>
+        <th>Numero boletim principal</th>-->
+        <th>Logradouro</th>
+        <th>Numero</th>
+        <th>Bairro</th>
+        <th>Cidade</th>
+        <th>UF</th><!--
+        <th>Latitude</th>
+        <th>Longitude</th>
+        <th>Descricaolocal</th>-->
+        <th>Exame</th>
+        <th>Solucao</th><!--
+        <th>Delegacia nome</th>
+        <th>Delegacia circunscricao</th>
+        <th>Especie</th>
+        <th>Rubrica</th>
+        <th>Desdobramento</th>
+        <th>Status</th>
+        <th>Nomepessoa</th>
+        <th>Tipopessoa</th>-->
+        <th>Vitima fatal</th>
+        <th>RG</th>
+        <th>Nacionalidade</th>
+        <th>Sexo</th>
+        <th>Data nascimento</th>
+        <th>Idade</th>
+        <th>Estadocivil</th>
+        <th>Profissao</th><!--
+        <th>Grauinstrucao</th>
+        <th>Corcutis</th>
+        <th>Naturezavinculada</th>
+        <th>Tipovinculo</th>
+        <th>Relacionamento</th>
+        <th>Parentesco</th>
+        <th>Placa veiculo</th>
+        <th>Uf veiculo</th>
+        <th>Cidade veiculo</th>
+        <th>Descr cor veiculo</th>
+        <th>Descr marca veiculo</th>
+        <th>Ano fabricacao</th>
+        <th>Ano modelo</th>
+        <th>Descr tipo veiculo</th>
+        <th>Quant celular</th>
+        <th>Marca celular</th>-->
+        <th colspan="3">Acoes</th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody>
+      <% @raw_registros_ocorrencias_ssp_sp_gov_brs.each do |raw_registros_ocorrencias_ssp_sp_gov_br| %>
+        <tr>
+          <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.ano_bo %></td>
+          <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.num_bo %></td>
+          <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.numero_boletim %></td><!--
+          <%# <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.bo_iniciado %></td> %>
+          <%# <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.bo_emitido %></td> %>-->
+          <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.dataocorrencia + " - " + 
+          raw_registros_ocorrencias_ssp_sp_gov_br.horaocorrencia %></td><!--
+          <%# <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.peridoocorrencia %></td> %>
+          <%# <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.datacomunicacao %></td> %>
+          <%# <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.dataelaboracao %></td> %>
+          <%# <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.bo_autoria %></td> %>
+          <%# <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.flagrante %></td> %>
+          <%# <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.numero_boletim_principal %></td> %>-->
+          <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.logradouro %></td>
+          <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.numero %></td>
+          <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.bairro %></td>
+          <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.cidade %></td>
+          <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.uf %></td><!--
+          <%# <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.latitude %></td> %>
+          <%# <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.longitude %></td> %>
+          <%# <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.descricaolocal %></td> %>-->
+          <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.exame %></td>
+          <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.solucao %></td><!--
+          <%# <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.delegacia_nome %></td> %>
+          <%# <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.delegacia_circunscricao %></td> %>
+          <%# <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.especie %></td> %>
+          <%# <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.rubrica %></td> %>
+          <%# <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.desdobramento %></td> %>
+          <%# <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.status %></td> %>
+          <%# <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.nomepessoa %></td> %>
+          <%# <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.tipopessoa %></td> %>-->
+          <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.vitimafatal %></td>
+          <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.rg %></td>
+          <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.nacionalidade %></td>
+          <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.sexo %></td>
+          <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.datanascimento %></td>
+          <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.idade %></td>
+          <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.estadocivil %></td>
+          <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.profissao %></td><!--
+          <%# <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.grauinstrucao %></td> %>
+          <%# <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.corcutis %></td> %>
+          <%# <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.naturezavinculada %></td> %>
+          <%# <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.tipovinculo %></td> %>
+          <%# <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.relacionamento %></td> %>
+          <%# <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.parentesco %></td> %>
+          <%# <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.placa_veiculo %></td> %>
+          <%# <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.uf_veiculo %></td> %>
+          <%# <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.cidade_veiculo %></td> %>
+          <%# <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.descr_cor_veiculo %></td> %>
+          <%# <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.descr_marca_veiculo %></td> %>
+          <%# <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.ano_fabricacao %></td> %>
+          <%# <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.ano_modelo %></td> %>
+          <%# <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.descr_tipo_veiculo %></td> %>
+          <%# <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.quant_celular %></td> %>
+          <%# <td><%= raw_registros_ocorrencias_ssp_sp_gov_br.marca_celular %></td> %>-->
+          <td><%= link_to 'Show', raw_registros_ocorrencias_ssp_sp_gov_br %></td>
+          <td><%= link_to 'Edit', edit_raw_registros_ocorrencias_ssp_sp_gov_br_path(raw_registros_ocorrencias_ssp_sp_gov_br) %></td>
+          <td><%= link_to 'Destroy', raw_registros_ocorrencias_ssp_sp_gov_br, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 
-<%= link_to 'New Raw Registros Ocorrencias Ssp Sp Gov Br', new_raw_registros_ocorrencias_ssp_sp_gov_br_path %>
+</div>

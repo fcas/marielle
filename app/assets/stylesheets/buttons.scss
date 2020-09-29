@@ -1,0 +1,21 @@
+@import "variables.scss";
+
+.btn {
+    display: inline-block;
+    padding: .5rem 1rem;
+    border: none;
+    background: $highlightColor;
+    color: $lightColor;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    border-radius: 4px;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: $primaryColor;
+    color: $lightColor;
+}

@@ -16,14 +16,16 @@
     <main>
       <ul class="nav">
         <li><a href="/">Logo Marielle</a></li>
-        <li><a href="/raw_registros_ocorrencias_ssp_sp_gov_brs/show">
+        <li><a href="/raw_registros_ocorrencias_ssp_sp_gov_brs">
           <img class="icon" src=" <%= asset_path('address-card.svg') %>"/>Relatorios</a>
         </li>
         <li><a href="/raw_registros_ocorrencias_ssp_sp_gov_brs/new">
           <img class="icon" src=" <%= asset_path('plus-square.svg') %>"/>Reportar</a>
         </li>
       </ul>
-      <%= yield %>
+      <div class="yield">
+        <%= yield %>
+      </div>
     </main>
     <footer></footer>
   </body>

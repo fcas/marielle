@@ -3,6 +3,8 @@
 *= depend_on scaffolding.scss
 *= depend_on navbar.scss
 *= depend_on forms.scss
+*= depend_on tables.scss
+*= depend_on buttons.scss
 */
 
 // CSS Reset
@@ -17,6 +19,8 @@
 // Patterns and elements
 @import "navbar.scss";
 @import "forms.scss";
+@import "tables.scss";
+@import "buttons.scss";
 
 body {
     font: normal 1rem "Fira Sans", "Helvetica Neue", sans-serif;
@@ -32,4 +36,5 @@ body {
 h1 {
     font-size: $titleSize;
     color: $highlightColor;
+    padding: .5rem 0;
 }
