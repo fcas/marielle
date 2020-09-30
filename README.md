@@ -16,8 +16,10 @@ Funcionalidades a serem desenvolvidas (ainda estão em discussão e sujeitas a m
 - Conteúdo educacional
 - Hub de psicológos
 
-A aplicação está disponível no Heroku: 
-https://mariellle.herokuapp.com
+## Aplicações:
+- [marielle (web)](https://mariellle.herokuapp.com) 
+- [marielle-superset (dataviz)](https://marielle-superset.herokuapp.com)
+
 
 ## Colaboradores
 
