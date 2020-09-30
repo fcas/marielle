@@ -28,4 +28,9 @@ https://mariellle.herokuapp.com
 - [Larissa Mangolim Amaral](https://github.com/sadlune) (USP-EACH-SIN5005)
 - [Leonardo Colman Lopes](https://github.com/LeoColman) (USP-EACH-SIN5005)
 
-[Pivotal](https://www.pivotaltracker.com/n/projects/2468288)
+## Projeto
+- [Pivotal](https://www.pivotaltracker.com/n/projects/2468288)
+
+## Documentação
+- [Wiki](https://github.com/fcas/marielle/wiki)
+
