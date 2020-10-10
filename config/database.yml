@@ -24,10 +24,5 @@ test:
   <<: *development
   database: test
 
-production: &production
-  <<: *default
-  host: PG_HOST
-  port: PG_PORT
-  user: PG_USER
-  password: PG_PASSWORD
-  database: PG_DBNAME
+production:
+  url: <%= ENV['DATABASE_URL'] %>
