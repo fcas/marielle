@@ -30,6 +30,9 @@ production:
 
 production:
   <<: *default
+  host: <%= ENV['PG_HOST'] %>
+  port: <%= ENV['PG_PORT'] %>
   database: <%= ENV['PG_DBNAME'] %>
   username: <%= ENV['PG_USER'] %>
   password: <%= ENV['PG_PASSWORD'] %>
+
