@@ -1,2 +1,0 @@
-class RawRegistrosOcorrenciasSspSpGovBrsTeste < ApplicationRecord
-end
