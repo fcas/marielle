@@ -17,9 +17,13 @@ Funcionalidades a serem desenvolvidas (ainda estão em discussão e sujeitas a m
 - Hub de psicológos
 
 ## Aplicações:
-- [marielle (web)](https://mariellle.herokuapp.com) 
+- [marielle (web)](https://marielle-app.herokuapp.com)
+- [marielle (api)](https://mariellle.herokuapp.com): algumas funcionalidades ainda não foram migradas para o frontend
 - [marielle-superset (dataviz)](https://marielle-superset.herokuapp.com)
 
+## Repositórios complementares
+[marielle-app](http://github.com/sadlune/marielle-app)
+[marielle-superset](http://github.com/fcas/marielle-superset)
 
 ## Colaboradores
 
