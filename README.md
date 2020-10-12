@@ -22,8 +22,8 @@ Funcionalidades a serem desenvolvidas (ainda estão em discussão e sujeitas a m
 - [marielle-superset (dataviz)](https://marielle-superset.herokuapp.com)
 
 ## Repositórios complementares
-[marielle-app](http://github.com/sadlune/marielle-app)
-[marielle-superset](http://github.com/fcas/marielle-superset)
+- [marielle-app](http://github.com/sadlune/marielle-app)
+- [marielle-superset](http://github.com/fcas/marielle-superset)
 
 ## Colaboradores
 
