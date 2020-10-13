@@ -5,6 +5,7 @@
 # files.
 
 require 'cucumber/rails'
+require 'selenium-webdriver'
 
 # frozen_string_literal: true
 
@@ -12,6 +13,11 @@ require 'cucumber/rails'
 # If you'd prefer to use XPath, just uncomment this line and adjust any
 # selectors in your step definitions to use the XPath syntax.
 # Capybara.default_selector = :xpath
+
+Capybara.default_driver = :selenium
+Capybara.default_max_wait_time = 5
+
+$BASE_URL = 'http://localhost:3003' #'https://marielle-app.herokuapp.com'
 
 # By default, any exception happening in your Rails application will bubble up
 # to Cucumber so that your scenario will fail. This is a different from how
