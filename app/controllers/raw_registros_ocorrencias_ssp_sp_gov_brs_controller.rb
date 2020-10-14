@@ -1,4 +1,6 @@
 class RawRegistrosOcorrenciasSspSpGovBrsController < ApplicationController
+  #TODO: foi removida a verificação do CSRF temporariamente. O ideal é conseguirmos configurar para o frontend acessar corretamente com o CSRF
+  skip_before_action :verify_authenticity_token
   before_action :set_raw_registros_ocorrencias_ssp_sp_gov_br, only: [:show, :edit, :update, :destroy]
 
   # GET /raw_registros_ocorrencias_ssp_sp_gov_brs
@@ -24,16 +26,13 @@ class RawRegistrosOcorrenciasSspSpGovBrsController < ApplicationController
   # POST /raw_registros_ocorrencias_ssp_sp_gov_brs
   # POST /raw_registros_ocorrencias_ssp_sp_gov_brs.json
   def create
+
     @raw_registros_ocorrencias_ssp_sp_gov_br = RawRegistrosOcorrenciasSspSpGovBr.new(raw_registros_ocorrencias_ssp_sp_gov_br_params)
 
-    respond_to do |format|
-      if @raw_registros_ocorrencias_ssp_sp_gov_br.save
-        format.html { redirect_to @raw_registros_ocorrencias_ssp_sp_gov_br, notice: 'Raw registros ocorrencias ssp sp gov br was successfully created.' }
-        format.json { render :show, status: :created, location: @raw_registros_ocorrencias_ssp_sp_gov_br }
-      else
-        format.html { render :new }
-        format.json { render json: @raw_registros_ocorrencias_ssp_sp_gov_br.errors, status: :unprocessable_entity }
-      end
+    if @raw_registros_ocorrencias_ssp_sp_gov_br.save
+      render json: {status: 'SUCCESS', message: 'Ocorrência registrada com sucesso!', data:@raw_registros_ocorrencias_ssp_sp_gov_br}, status: :ok
+    else
+      render json: {status: 'ERROR', message: 'Erro ao salvar ocorrência', data:@raw_registros_ocorrencias_ssp_sp_gov_br.erros}, status: :unprocessable_entity
     end
   end
 
