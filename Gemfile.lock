@@ -126,6 +126,12 @@ GEM
       activesupport (>= 4.2.0)
     i18n (1.8.5)
       concurrent-ruby (~> 1.0)
+    jasmine (3.6.0)
+      jasmine-core (~> 3.6.0)
+      phantomjs
+      rack (>= 1.2.1)
+      rake
+    jasmine-core (3.6.0)
     jbuilder (2.10.0)
       activesupport (>= 5.0.0)
     json (2.3.1)
@@ -154,6 +160,7 @@ GEM
     nokogiri (1.10.10)
       mini_portile2 (~> 2.4.0)
     pg (1.2.3)
+    phantomjs (2.1.1.0)
     protobuf-cucumber (3.10.8)
       activesupport (>= 3.2)
       middleware
@@ -210,6 +217,14 @@ GEM
     rspec-mocks (3.9.1)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.9.0)
+    rspec-rails (4.0.1)
+      actionpack (>= 4.2)
+      activesupport (>= 4.2)
+      railties (>= 4.2)
+      rspec-core (~> 3.9)
+      rspec-expectations (~> 3.9)
+      rspec-mocks (~> 3.9)
+      rspec-support (~> 3.9)
     rspec-support (3.9.3)
     rubyzip (2.3.0)
     sass-rails (6.0.0)
@@ -286,12 +301,14 @@ DEPENDENCIES
   coveralls
   cucumber-rails
   database_cleaner
+  jasmine
   jbuilder (~> 2.7)
   listen (~> 3.2)
   pg (~> 1.2.3)
   puma (~> 4.1)
   rails (~> 6.0.3, >= 6.0.3.2)
   rspec (>= 3.7.0)
+  rspec-rails (~> 4.0.1)
   sass-rails (>= 6)
   selenium-webdriver
   spring
