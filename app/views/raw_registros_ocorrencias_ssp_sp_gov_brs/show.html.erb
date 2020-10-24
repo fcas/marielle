@@ -1,289 +1,86 @@
-<p id="notice"><%= notice %></p>
+<div class="form-header">
+    <h1>Ocorrência <%= @raw_registros_ocorrencias_ssp_sp_gov_br.numero_boletim %></h1>
+</div>
+<div class="form-content">
 
-<p>
-  <strong>Ano bo:</strong>
-  <%= @raw_registros_ocorrencias_ssp_sp_gov_br.ano_bo %>
-</p>
+  <p>
+    <strong>Data:</strong>
+    <%= (@raw_registros_ocorrencias_ssp_sp_gov_br.dataocorrencia.nil? ? '' : (@raw_registros_ocorrencias_ssp_sp_gov_br.dataocorrencia + ' - ')) +
+        (@raw_registros_ocorrencias_ssp_sp_gov_br.horaocorrencia.nil? ? '' : @raw_registros_ocorrencias_ssp_sp_gov_br.horaocorrencia) %>
+  </p>
 
-<p>
-  <strong>Num bo:</strong>
-  <%= @raw_registros_ocorrencias_ssp_sp_gov_br.num_bo %>
-</p>
+  <h1>Endereço</h1>
 
-<p>
-  <strong>Numero boletim:</strong>
-  <%= @raw_registros_ocorrencias_ssp_sp_gov_br.numero_boletim %>
-</p>
+  <p>
+    <strong>Logradouro:</strong>
+    <%= @raw_registros_ocorrencias_ssp_sp_gov_br.logradouro %>
+  </p>
 
-<p>
-  <strong>Bo iniciado:</strong>
-  <%= @raw_registros_ocorrencias_ssp_sp_gov_br.bo_iniciado %>
-</p>
+  <p>
+    <strong>Número:</strong>
+    <%= @raw_registros_ocorrencias_ssp_sp_gov_br.numero %>
+  </p>
 
-<p>
-  <strong>Bo emitido:</strong>
-  <%= @raw_registros_ocorrencias_ssp_sp_gov_br.bo_emitido %>
-</p>
+  <p>
+    <strong>Bairro:</strong>
+    <%= @raw_registros_ocorrencias_ssp_sp_gov_br.bairro %>
+  </p>
 
-<p>
-  <strong>Dataocorrencia:</strong>
-  <%= @raw_registros_ocorrencias_ssp_sp_gov_br.dataocorrencia %>
-</p>
+  <p>
+    <strong>Cidade:</strong>
+    <%= @raw_registros_ocorrencias_ssp_sp_gov_br.cidade %>
+  </p>
 
-<p>
-  <strong>Horaocorrencia:</strong>
-  <%= @raw_registros_ocorrencias_ssp_sp_gov_br.horaocorrencia %>
-</p>
+  <p>
+    <strong>UF:</strong>
+    <%= @raw_registros_ocorrencias_ssp_sp_gov_br.uf %>
+  </p>
 
-<p>
-  <strong>Peridoocorrencia:</strong>
-  <%= @raw_registros_ocorrencias_ssp_sp_gov_br.peridoocorrencia %>
-</p>
+  <p>
+    <strong>Descrição do local:</strong>
+    <%= @raw_registros_ocorrencias_ssp_sp_gov_br.descricaolocal %>
+  </p>
 
-<p>
-  <strong>Datacomunicacao:</strong>
-  <%= @raw_registros_ocorrencias_ssp_sp_gov_br.datacomunicacao %>
-</p>
+  <h1>Vítima</h1>
 
-<p>
-  <strong>Dataelaboracao:</strong>
-  <%= @raw_registros_ocorrencias_ssp_sp_gov_br.dataelaboracao %>
-</p>
+  <p>
+    <strong>Nome:</strong>
+    <%= @raw_registros_ocorrencias_ssp_sp_gov_br.nomepessoa %>
+  </p>
 
-<p>
-  <strong>Bo autoria:</strong>
-  <%= @raw_registros_ocorrencias_ssp_sp_gov_br.bo_autoria %>
-</p>
+  <p>
+    <strong>RG:</strong>
+    <%= @raw_registros_ocorrencias_ssp_sp_gov_br.rg %>
+  </p>
 
-<p>
-  <strong>Flagrante:</strong>
-  <%= @raw_registros_ocorrencias_ssp_sp_gov_br.flagrante %>
-</p>
+  <p>
+    <strong>Naturalidade:</strong>
+    <%= @raw_registros_ocorrencias_ssp_sp_gov_br.naturalidade %>
+  </p>
 
-<p>
-  <strong>Numero boletim principal:</strong>
-  <%= @raw_registros_ocorrencias_ssp_sp_gov_br.numero_boletim_principal %>
-</p>
+  <p>
+    <strong>Nacionalidade:</strong>
+    <%= @raw_registros_ocorrencias_ssp_sp_gov_br.nacionalidade %>
+  </p>
 
-<p>
-  <strong>Logradouro:</strong>
-  <%= @raw_registros_ocorrencias_ssp_sp_gov_br.logradouro %>
-</p>
+  <p>
+    <strong>Sexo:</strong>
+    <%= @raw_registros_ocorrencias_ssp_sp_gov_br.sexo %>
+  </p>
 
-<p>
-  <strong>Numero:</strong>
-  <%= @raw_registros_ocorrencias_ssp_sp_gov_br.numero %>
-</p>
+  <p>
+    <strong>Data de nascimento:</strong>
+    <%= @raw_registros_ocorrencias_ssp_sp_gov_br.datanascimento %>
+  </p>
 
-<p>
-  <strong>Bairro:</strong>
-  <%= @raw_registros_ocorrencias_ssp_sp_gov_br.bairro %>
-</p>
+  <p>
+    <strong>Estado civil:</strong>
+    <%= @raw_registros_ocorrencias_ssp_sp_gov_br.estadocivil %>
+  </p>
 
-<p>
-  <strong>Cidade:</strong>
-  <%= @raw_registros_ocorrencias_ssp_sp_gov_br.cidade %>
-</p>
+  <p>
+    <strong>Profissão:</strong>
+    <%= @raw_registros_ocorrencias_ssp_sp_gov_br.profissao %>
+  </p>
 
-<p>
-  <strong>Uf:</strong>
-  <%= @raw_registros_ocorrencias_ssp_sp_gov_br.uf %>
-</p>
-
-<p>
-  <strong>Latitude:</strong>
-  <%= @raw_registros_ocorrencias_ssp_sp_gov_br.latitude %>
-</p>
-
-<p>
-  <strong>Longitude:</strong>
-  <%= @raw_registros_ocorrencias_ssp_sp_gov_br.longitude %>
-</p>
-
-<p>
-  <strong>Descricaolocal:</strong>
-  <%= @raw_registros_ocorrencias_ssp_sp_gov_br.descricaolocal %>
-</p>
-
-<p>
-  <strong>Exame:</strong>
-  <%= @raw_registros_ocorrencias_ssp_sp_gov_br.exame %>
-</p>
-
-<p>
-  <strong>Solucao:</strong>
-  <%= @raw_registros_ocorrencias_ssp_sp_gov_br.solucao %>
-</p>
-
-<p>
-  <strong>Delegacia nome:</strong>
-  <%= @raw_registros_ocorrencias_ssp_sp_gov_br.delegacia_nome %>
-</p>
-
-<p>
-  <strong>Delegacia circunscricao:</strong>
-  <%= @raw_registros_ocorrencias_ssp_sp_gov_br.delegacia_circunscricao %>
-</p>
-
-<p>
-  <strong>Especie:</strong>
-  <%= @raw_registros_ocorrencias_ssp_sp_gov_br.especie %>
-</p>
-
-<p>
-  <strong>Rubrica:</strong>
-  <%= @raw_registros_ocorrencias_ssp_sp_gov_br.rubrica %>
-</p>
-
-<p>
-  <strong>Desdobramento:</strong>
-  <%= @raw_registros_ocorrencias_ssp_sp_gov_br.desdobramento %>
-</p>
-
-<p>
-  <strong>Status:</strong>
-  <%= @raw_registros_ocorrencias_ssp_sp_gov_br.status %>
-</p>
-
-<p>
-  <strong>Nomepessoa:</strong>
-  <%= @raw_registros_ocorrencias_ssp_sp_gov_br.nomepessoa %>
-</p>
-
-<p>
-  <strong>Tipopessoa:</strong>
-  <%= @raw_registros_ocorrencias_ssp_sp_gov_br.tipopessoa %>
-</p>
-
-<p>
-  <strong>Vitimafatal:</strong>
-  <%= @raw_registros_ocorrencias_ssp_sp_gov_br.vitimafatal %>
-</p>
-
-<p>
-  <strong>Rg:</strong>
-  <%= @raw_registros_ocorrencias_ssp_sp_gov_br.rg %>
-</p>
-
-<p>
-  <strong>Rg uf:</strong>
-  <%= @raw_registros_ocorrencias_ssp_sp_gov_br.rg_uf %>
-</p>
-
-<p>
-  <strong>Naturalidade:</strong>
-  <%= @raw_registros_ocorrencias_ssp_sp_gov_br.naturalidade %>
-</p>
-
-<p>
-  <strong>Nacionalidade:</strong>
-  <%= @raw_registros_ocorrencias_ssp_sp_gov_br.nacionalidade %>
-</p>
-
-<p>
-  <strong>Sexo:</strong>
-  <%= @raw_registros_ocorrencias_ssp_sp_gov_br.sexo %>
-</p>
-
-<p>
-  <strong>Datanascimento:</strong>
-  <%= @raw_registros_ocorrencias_ssp_sp_gov_br.datanascimento %>
-</p>
-
-<p>
-  <strong>Idade:</strong>
-  <%= @raw_registros_ocorrencias_ssp_sp_gov_br.idade %>
-</p>
-
-<p>
-  <strong>Estadocivil:</strong>
-  <%= @raw_registros_ocorrencias_ssp_sp_gov_br.estadocivil %>
-</p>
-
-<p>
-  <strong>Profissao:</strong>
-  <%= @raw_registros_ocorrencias_ssp_sp_gov_br.profissao %>
-</p>
-
-<p>
-  <strong>Grauinstrucao:</strong>
-  <%= @raw_registros_ocorrencias_ssp_sp_gov_br.grauinstrucao %>
-</p>
-
-<p>
-  <strong>Corcutis:</strong>
-  <%= @raw_registros_ocorrencias_ssp_sp_gov_br.corcutis %>
-</p>
-
-<p>
-  <strong>Naturezavinculada:</strong>
-  <%= @raw_registros_ocorrencias_ssp_sp_gov_br.naturezavinculada %>
-</p>
-
-<p>
-  <strong>Tipovinculo:</strong>
-  <%= @raw_registros_ocorrencias_ssp_sp_gov_br.tipovinculo %>
-</p>
-
-<p>
-  <strong>Relacionamento:</strong>
-  <%= @raw_registros_ocorrencias_ssp_sp_gov_br.relacionamento %>
-</p>
-
-<p>
-  <strong>Parentesco:</strong>
-  <%= @raw_registros_ocorrencias_ssp_sp_gov_br.parentesco %>
-</p>
-
-<p>
-  <strong>Placa veiculo:</strong>
-  <%= @raw_registros_ocorrencias_ssp_sp_gov_br.placa_veiculo %>
-</p>
-
-<p>
-  <strong>Uf veiculo:</strong>
-  <%= @raw_registros_ocorrencias_ssp_sp_gov_br.uf_veiculo %>
-</p>
-
-<p>
-  <strong>Cidade veiculo:</strong>
-  <%= @raw_registros_ocorrencias_ssp_sp_gov_br.cidade_veiculo %>
-</p>
-
-<p>
-  <strong>Descr cor veiculo:</strong>
-  <%= @raw_registros_ocorrencias_ssp_sp_gov_br.descr_cor_veiculo %>
-</p>
-
-<p>
-  <strong>Descr marca veiculo:</strong>
-  <%= @raw_registros_ocorrencias_ssp_sp_gov_br.descr_marca_veiculo %>
-</p>
-
-<p>
-  <strong>Ano fabricacao:</strong>
-  <%= @raw_registros_ocorrencias_ssp_sp_gov_br.ano_fabricacao %>
-</p>
-
-<p>
-  <strong>Ano modelo:</strong>
-  <%= @raw_registros_ocorrencias_ssp_sp_gov_br.ano_modelo %>
-</p>
-
-<p>
-  <strong>Descr tipo veiculo:</strong>
-  <%= @raw_registros_ocorrencias_ssp_sp_gov_br.descr_tipo_veiculo %>
-</p>
-
-<p>
-  <strong>Quant celular:</strong>
-  <%= @raw_registros_ocorrencias_ssp_sp_gov_br.quant_celular %>
-</p>
-
-<p>
-  <strong>Marca celular:</strong>
-  <%= @raw_registros_ocorrencias_ssp_sp_gov_br.marca_celular %>
-</p>
-
-<%= link_to 'Edit', edit_raw_registros_ocorrencias_ssp_sp_gov_br_path(@raw_registros_ocorrencias_ssp_sp_gov_br) %> |
-<%= link_to 'Back', raw_registros_ocorrencias_ssp_sp_gov_brs_path %>
+</div>
