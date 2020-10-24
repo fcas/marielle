@@ -8,4 +8,4 @@ Funcionalidade: Visualizar períodos de violências contra mulheres
   Cenário: Visualizar tabela com sucesso
     Dado que estou na página sobre período de violências contra mulheres
     Quando faço nada
-    Então uma tabela com os períodos de violência contra mulheres é exibida
+    Então a tabela "periods_of_violence" contra mulheres é exibida
