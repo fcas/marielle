@@ -31,7 +31,7 @@ class RawRegistrosOcorrenciasSspSpGovBrsController < ApplicationController
   # POST /raw_registros_ocorrencias_ssp_sp_gov_brs.json
   def create
     @raw_registros_ocorrencias_ssp_sp_gov_br = RawRegistrosOcorrenciasSspSpGovBr.new(raw_registros_ocorrencias_ssp_sp_gov_br_params)
-
+    
     respond_to do |format|
       if @raw_registros_ocorrencias_ssp_sp_gov_br.save
         format.html { redirect_to @raw_registros_ocorrencias_ssp_sp_gov_br, notice: 'Raw registros ocorrencias ssp sp gov br was successfully created.' }
