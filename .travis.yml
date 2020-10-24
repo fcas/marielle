@@ -3,6 +3,13 @@ rvm:
   - 2.7.1
   - jruby
 
+addons:
+  firefox: latest
+
+env:
+  globoal:
+    - MOZ_HEADLESS=1
+
 services:
   - postgresql
 
@@ -15,3 +22,8 @@ before_script:
 before_install:
   - rvm install 2.7.1
   - rvm use 2.7.1
+  - sudo apt-get update > /dev/null
+  - wget https://github.com/mozilla/geckodriver/releases/download/v0.27.0/geckodriver-v0.27.0-linux32.tar.gz
+  - mkdir geckodriver
+  - tar -xzf geckodriver-v0.27.0-linux32.tar.gz -C geckodriver
+  - export PATH=$PATH:$PWD/geckodriver

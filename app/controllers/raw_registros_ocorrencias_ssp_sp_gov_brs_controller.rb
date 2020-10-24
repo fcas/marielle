@@ -1,24 +1,30 @@
 class RawRegistrosOcorrenciasSspSpGovBrsController < ApplicationController
-  before_action :set_raw_registros_ocorrencias_ssp_sp_gov_br, only: [:show, :edit, :update, :destroy]
-
+  
   # GET /raw_registros_ocorrencias_ssp_sp_gov_brs
   # GET /raw_registros_ocorrencias_ssp_sp_gov_brs.json
   def index
     @raw_registros_ocorrencias_ssp_sp_gov_brs = RawRegistrosOcorrenciasSspSpGovBr.all
+
+    respond_to do |format|
+      format.html
+      format.json { render json: @raw_registros_ocorrencias_ssp_sp_gov_brs, status: :ok }
+    end
   end
 
   # GET /raw_registros_ocorrencias_ssp_sp_gov_brs/1
   # GET /raw_registros_ocorrencias_ssp_sp_gov_brs/1.json
   def show
+    @raw_registros_ocorrencias_ssp_sp_gov_br = RawRegistrosOcorrenciasSspSpGovBr.find(params[:id])
+    
+    respond_to do |format|
+      format.html
+      format.json { render json: @raw_registros_ocorrencias_ssp_sp_gov_br, status: :ok }
+    end
   end
 
   # GET /raw_registros_ocorrencias_ssp_sp_gov_brs/new
   def new
     @raw_registros_ocorrencias_ssp_sp_gov_br = RawRegistrosOcorrenciasSspSpGovBr.new
-  end
-
-  # GET /raw_registros_ocorrencias_ssp_sp_gov_brs/1/edit
-  def edit
   end
 
   # POST /raw_registros_ocorrencias_ssp_sp_gov_brs
@@ -29,35 +35,11 @@ class RawRegistrosOcorrenciasSspSpGovBrsController < ApplicationController
     respond_to do |format|
       if @raw_registros_ocorrencias_ssp_sp_gov_br.save
         format.html { redirect_to @raw_registros_ocorrencias_ssp_sp_gov_br, notice: 'Raw registros ocorrencias ssp sp gov br was successfully created.' }
-        format.json { render :show, status: :created, location: @raw_registros_ocorrencias_ssp_sp_gov_br }
+        format.json { render json: {message: 'Ocorrência registrada com sucesso!', data:@raw_registros_ocorrencias_ssp_sp_gov_br}, status: :created }
       else
         format.html { render :new }
-        format.json { render json: @raw_registros_ocorrencias_ssp_sp_gov_br.errors, status: :unprocessable_entity }
+        format.json { render json: {message: 'Erro ao salvar ocorrência', data:@raw_registros_ocorrencias_ssp_sp_gov_br.erros}, status: :unprocessable_entity }
       end
-    end
-  end
-
-  # PATCH/PUT /raw_registros_ocorrencias_ssp_sp_gov_brs/1
-  # PATCH/PUT /raw_registros_ocorrencias_ssp_sp_gov_brs/1.json
-  def update
-    respond_to do |format|
-      if @raw_registros_ocorrencias_ssp_sp_gov_br.update(raw_registros_ocorrencias_ssp_sp_gov_br_params)
-        format.html { redirect_to @raw_registros_ocorrencias_ssp_sp_gov_br, notice: 'Raw registros ocorrencias ssp sp gov br was successfully updated.' }
-        format.json { render :show, status: :ok, location: @raw_registros_ocorrencias_ssp_sp_gov_br }
-      else
-        format.html { render :edit }
-        format.json { render json: @raw_registros_ocorrencias_ssp_sp_gov_br.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  # DELETE /raw_registros_ocorrencias_ssp_sp_gov_brs/1
-  # DELETE /raw_registros_ocorrencias_ssp_sp_gov_brs/1.json
-  def destroy
-    @raw_registros_ocorrencias_ssp_sp_gov_br.destroy
-    respond_to do |format|
-      format.html { redirect_to raw_registros_ocorrencias_ssp_sp_gov_brs_url, notice: 'Raw registros ocorrencias ssp sp gov br was successfully destroyed.' }
-      format.json { head :no_content }
     end
   end
 

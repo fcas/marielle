@@ -11,63 +11,20 @@
   <% end %>
   <ul class="flex-outer">
     <li class="form-field">
-        <%= form.label :ano_bo %>
-        <%= form.number_field :ano_bo %>
-    </li>
-    <li class="form-field">
-        <%= form.label :num_bo %>
-        <%= form.number_field :num_bo %>
-    </li>
-    <li class="form-field">
-        <%= form.label :numero_boletim %>
-        <%= form.text_area :numero_boletim %>
-    </li>
-    <li class="form-field">
-        <%= form.label :bo_iniciado %>
-        <%= form.text_area :bo_iniciado %>
-    </li>
-    <li class="form-field">
-        <%= form.label :bo_emitido %>
-        <%= form.text_area :bo_emitido %>
-    </li>
-    <li class="form-field">
-        <%= form.label :dataocorrencia %>
+        <%= form.label :dataocorrencia, 'Data da ocorrência' %>
         <%= form.text_area :dataocorrencia %>
     </li>
     <li class="form-field">
-        <%= form.label :horaocorrencia %>
+        <%= form.label :horaocorrencia, 'Hora da ocorrência' %>
         <%= form.text_area :horaocorrencia %>
     </li>
-    <li class="form-field">
-        <%= form.label :peridoocorrencia %>
-        <%= form.text_area :peridoocorrencia %>
-    </li>
-    <li class="form-field">
-        <%= form.label :datacomunicacao %>
-        <%= form.text_area :datacomunicacao %>
-    </li>
-    <li class="form-field">
-        <%= form.label :dataelaboracao %>
-        <%= form.text_area :dataelaboracao %>
-    </li>
-    <li class="form-field">
-        <%= form.label :bo_autoria %>
-        <%= form.text_area :bo_autoria %>
-    </li>
-    <li class="form-field">
-        <%= form.label :flagrante %>
-        <%= form.text_area :flagrante %>
-    </li>
-    <li class="form-field">
-        <%= form.label :numero_boletim_principal %>
-        <%= form.text_area :numero_boletim_principal %>
-    </li>
+    <h2>Endereço</h2>
     <li class="form-field">
         <%= form.label :logradouro %>
         <%= form.text_area :logradouro %>
     </li>
     <li class="form-field">
-        <%= form.label :numero %>
+        <%= form.label :numero, 'Número' %>
         <%= form.number_field :numero %>
     </li>
     <li class="form-field">
@@ -83,72 +40,17 @@
         <%= form.text_area :uf %>
     </li>
     <li class="form-field">
-        <%= form.label :latitude %>
-        <%= form.text_area :latitude %>
-    </li>
-    <li class="form-field">
-        <%= form.label :longitude %>
-        <%= form.text_area :longitude %>
-    </li>
-    <li class="form-field">
-        <%= form.label :descricaolocal %>
+        <%= form.label :descricaolocal, 'Descrição do local' %>
         <%= form.text_area :descricaolocal %>
     </li>
+    <h2>Informações da vítima</h2>
     <li class="form-field">
-        <%= form.label :exame %>
-        <%= form.text_area :exame %>
-    </li>
-    <li class="form-field">
-        <%= form.label :solucao %>
-        <%= form.text_area :solucao %>
-    </li>
-    <li class="form-field">
-        <%= form.label :delegacia_nome %>
-        <%= form.text_area :delegacia_nome %>
-    </li>
-    <li class="form-field">
-        <%= form.label :delegacia_circunscricao %>
-        <%= form.text_area :delegacia_circunscricao %>
-    </li>
-    <li class="form-field">
-        <%= form.label :especie %>
-        <%= form.text_area :especie %>
-    </li>
-    <li class="form-field">
-        <%= form.label :rubrica %>
-        <%= form.text_area :rubrica %>
-    </li>
-    <li class="form-field">
-        <%= form.label :desdobramento %>
-        <%= form.text_area :desdobramento %>
-    </li>
-    <li class="form-field">
-        <%= form.label :status %>
-        <%= form.text_area :status %>
-    </li>
-    <li class="form-field">
-        <%= form.label :nomepessoa %>
+        <%= form.label :nomepessoa, 'Nome' %>
         <%= form.text_area :nomepessoa %>
-    </li>
-    <li class="form-field">
-        <%= form.label :tipopessoa %>
-        <%= form.text_area :tipopessoa %>
-    </li>
-    <li class="form-field">
-        <%= form.label :vitimafatal %>
-        <%= form.text_area :vitimafatal %>
     </li>
     <li class="form-field">
         <%= form.label :rg %>
         <%= form.text_area :rg %>
-    </li>
-    <li class="form-field">
-        <%= form.label :rg_uf %>
-        <%= form.text_area :rg_uf %>
-    </li>
-    <li class="form-field">
-        <%= form.label :naturalidade %>
-        <%= form.text_area :naturalidade %>
     </li>
     <li class="form-field">
         <%= form.label :nacionalidade %>
@@ -159,86 +61,19 @@
         <%= form.text_area :sexo %>
     </li>
     <li class="form-field">
-        <%= form.label :datanascimento %>
+        <%= form.label :datanascimento, 'Data de nascimento' %>
         <%= form.text_area :datanascimento %>
     </li>
     <li class="form-field">
-        <%= form.label :idade %>
-        <%= form.text_area :idade %>
-    </li>
-    <li class="form-field">
-        <%= form.label :estadocivil %>
+        <%= form.label :estadocivil, 'Estado civil' %>
         <%= form.text_area :estadocivil %>
     </li>
     <li class="form-field">
-        <%= form.label :profissao %>
+        <%= form.label :profissao, 'Profissão' %>
         <%= form.text_area :profissao %>
     </li>
-    <li class="form-field">
-        <%= form.label :grauinstrucao %>
-        <%= form.text_area :grauinstrucao %>
-    </li>
-    <li class="form-field">
-        <%= form.label :corcutis %>
-        <%= form.text_area :corcutis %>
-    </li>
-    <li class="form-field">
-        <%= form.label :naturezavinculada %>
-        <%= form.text_area :naturezavinculada %>
-    </li>
-    <li class="form-field">
-        <%= form.label :tipovinculo %>
-        <%= form.text_area :tipovinculo %>
-    </li>
-    <li class="form-field">
-        <%= form.label :relacionamento %>
-        <%= form.text_area :relacionamento %>
-    </li>
-    <li class="form-field">
-        <%= form.label :parentesco %>
-        <%= form.text_area :parentesco %>
-    </li>
-    <li class="form-field">
-        <%= form.label :placa_veiculo %>
-        <%= form.text_area :placa_veiculo %>
-    </li>
-    <li class="form-field">
-        <%= form.label :uf_veiculo %>
-        <%= form.text_area :uf_veiculo %>
-    </li>
-    <li class="form-field">
-        <%= form.label :cidade_veiculo %>
-        <%= form.text_area :cidade_veiculo %>
-    </li>
-    <li class="form-field">
-        <%= form.label :descr_cor_veiculo %>
-        <%= form.text_area :descr_cor_veiculo %>
-    </li>
-    <li class="form-field">
-        <%= form.label :descr_marca_veiculo %>
-        <%= form.text_area :descr_marca_veiculo %>
-    </li>
-    <li class="form-field">
-        <%= form.label :ano_fabricacao %>
-        <%= form.number_field :ano_fabricacao %>
-    </li>
-    <li class="form-field">
-        <%= form.label :ano_modelo %>
-        <%= form.number_field :ano_modelo %>
-    </li>
-    <li class="form-field">
-        <%= form.label :descr_tipo_veiculo %>
-        <%= form.text_area :descr_tipo_veiculo %>
-    </li>
-    <li class="form-field">
-        <%= form.label :quant_celular %>
-        <%= form.text_area :quant_celular %>
-    </li>
-    <li class="form-field">
-        <%= form.label :marca_celular %>
-        <%= form.text_area :marca_celular %>
     <li class="form-submit">
-        <%= form.submit %>
+        <%= form.submit 'Registrar' %>
     </li>
   </ul>
 <% end %>
