@@ -6,6 +6,7 @@
 
 require 'cucumber/rails'
 require 'selenium-webdriver'
+require 'headless'
 
 # frozen_string_literal: true
 
@@ -14,10 +15,13 @@ require 'selenium-webdriver'
 # selectors in your step definitions to use the XPath syntax.
 # Capybara.default_selector = :xpath
 
-Capybara.default_driver = :selenium
-Capybara.default_max_wait_time = 5
+# Capybara.default_driver = :selenium
+# Capybara.default_max_wait_time = 5
 
-$BASE_URL = 'http://localhost:3003' #'https://marielle-app.herokuapp.com'
+# Capybara.register_driver :selenium do |app|
+#   require 'selenium/webdriver'
+#   Capybara::Selenium::Driver.new(app, :browser => :firefox, url: 'http://<your ip as reachable from docker>:<port geckodriver is available on>')
+# end
 
 # By default, any exception happening in your Rails application will bubble up
 # to Cucumber so that your scenario will fail. This is a different from how
@@ -63,4 +67,31 @@ end
 # The :transaction strategy is faster, but might give you threading problems.
 # See https://github.com/cucumber/cucumber-rails/blob/master/features/choose_javascript_database_strategy.feature
 Cucumber::Rails::Database.javascript_strategy = :truncation
+
+World do
+  SampleWorld.new
+end
+
+class SampleWorld
+
+  def driver
+    @driver
+  end
+
+  def open_browser
+    @headless = nil
+    if(/darwin/ =~ RUBY_PLATFORM) == nil
+      @headless = Headless.new
+      @headless.start
+    end
+    @driver = Selenium::WebDriver.for :firefox
+  end
+
+  def close_browser
+    @driver.quit
+    if !@headless.nil?
+      @headless.destroy
+    end
+  end
+end
 

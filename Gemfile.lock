@@ -124,6 +124,7 @@ GEM
     ffi (1.13.1)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
+    headless (2.3.1)
     i18n (1.8.5)
       concurrent-ruby (~> 1.0)
     jasmine (3.6.0)
@@ -301,6 +302,7 @@ DEPENDENCIES
   coveralls
   cucumber-rails
   database_cleaner
+  headless (~> 2.3, >= 2.3.1)
   jasmine
   jbuilder (~> 2.7)
   listen (~> 3.2)
