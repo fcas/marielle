@@ -15,6 +15,9 @@ development: &development
   user: postgres
   password: postgres
   database: postgres
+  port: 5432
+  reconect: true
+
 
 
 # Warning: The database defined as "test" will be erased and
