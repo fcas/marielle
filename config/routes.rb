@@ -3,5 +3,6 @@ Rails.application.routes.draw do
   root 'welcome#index'
   namespace :reports do
     get "periods_of_violence", to: "reports/periods_of_violence"
+    get "geolocalization_of_violence", to: "reports/geolocalization_of_violence"
   end
 end
