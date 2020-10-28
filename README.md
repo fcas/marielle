@@ -27,7 +27,7 @@ Funcionalidades a serem desenvolvidas (ainda estão em discussão e sujeitas a m
 
 ## Colaboradores
 
-- [Diego Neves](https://github.com/xdiegoneves) - xdiegoneves (USP-EACH-SIN5005)
+- [Não ativo] [Diego Neves](https://github.com/xdiegoneves) - xdiegoneves (USP-EACH-SIN5005)
 - [Felipe Cordeiro Alves Dias](https://github.com/fcas) - fcas (USP-EACH-SIN5005)
 - [Laísa Dias Brito Alves](https://github.com/laisacavazotto) - laisacavazotto (Community - UX Designer)
 - [Larissa Mangolim Amaral](https://github.com/sadlune) - sadlune (USP-EACH-SIN5005)
