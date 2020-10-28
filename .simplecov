@@ -1,4 +1,4 @@
 SimpleCov.formatter = Coveralls::SimpleCov::Formatter
-SimpleCov.start do
+SimpleCov.start 'rails' do
   add_filter %r{^/test/}
 end
