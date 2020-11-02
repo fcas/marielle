@@ -48,11 +48,17 @@
 }
 
 .flex-outer li input:not([type='checkbox']),
-.flex-outer li textarea {
+.flex-outer li select {
     padding: .7rem;
     border: 1px solid $highlightColor;
     border-radius: 6px;
     background: $lightColor;
+}
+
+.flex-outer li select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;       /* Remove default arrow */
 }
 
 .flex-outer li.form-submit input {

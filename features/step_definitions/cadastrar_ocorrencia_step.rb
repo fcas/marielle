@@ -8,6 +8,11 @@ Quando('preencho o campo {string} com {string}') do |campo, valor|
     find('#raw_registros_ocorrencias_ssp_sp_gov_br_' + campo).send_keys(valor)
 end
 
+Quando('seleciono a opção {string} no campo {string}') do |valor, campo|
+    find('#raw_registros_ocorrencias_ssp_sp_gov_br_' + campo)
+        .find('option[value="' + valor + '"]').select_option
+end
+
 Quando('clico em salvar') do
     click_on 'Registrar'
 end
