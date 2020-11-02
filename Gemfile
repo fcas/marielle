@@ -72,3 +72,5 @@ gem 'rspec', '>=3.7.0'
 gem 'coveralls', require: false
 
 gem 'maskedinput-rails'
+
+gem 'rails-controller-testing'

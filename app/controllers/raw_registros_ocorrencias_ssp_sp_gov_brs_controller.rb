@@ -38,7 +38,7 @@ class RawRegistrosOcorrenciasSspSpGovBrsController < ApplicationController
         format.json { render json: {message: 'Ocorrência registrada com sucesso!', data:@raw_registros_ocorrencias_ssp_sp_gov_br}, status: :created }
       else
         format.html { render :new }
-        format.json { render json: {message: 'Erro ao salvar ocorrência', data:@raw_registros_ocorrencias_ssp_sp_gov_br.erros}, status: :unprocessable_entity }
+        format.json { render json: {message: 'Erro ao salvar ocorrência', data:@raw_registros_ocorrencias_ssp_sp_gov_br.errors}, status: :unprocessable_entity }
       end
     end
   end
