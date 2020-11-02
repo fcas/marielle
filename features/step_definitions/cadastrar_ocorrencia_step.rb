@@ -3,8 +3,9 @@ Dado('que estou na página de cadastro de ocorrência') do
 end
 
 Quando('preencho o campo {string} com {string}') do |campo, valor|
-    fill_in "raw_registros_ocorrencias_ssp_sp_gov_br_" + campo, :with => valor
+    #fill_in "raw_registros_ocorrencias_ssp_sp_gov_br_" + campo, :with => valor
     #find('input[name="' + campo + '"]').set(valor)
+    find('#raw_registros_ocorrencias_ssp_sp_gov_br_' + campo).send_keys(valor)
 end
 
 Quando('clico em salvar') do

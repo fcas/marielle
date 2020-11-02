@@ -12,11 +12,11 @@
   <ul class="flex-outer">
     <li class="form-field">
         <%= form.label :dataocorrencia, 'Data da ocorrência' %>
-        <%= form.text_field :dataocorrencia, :maxlength => 10 %>
+        <%= form.text_field :dataocorrencia, :maxlength => 10, class:'date' %>
     </li>
     <li class="form-field">
         <%= form.label :horaocorrencia, 'Hora da ocorrência' %>
-        <%= form.text_field :horaocorrencia, :maxlength => 5 %>
+        <%= form.text_field :horaocorrencia, :maxlength => 5, class:'hour' %>
     </li>
     <h2>Endereço</h2>
     <li class="form-field">
@@ -50,7 +50,7 @@
     </li>
     <li class="form-field">
         <%= form.label :rg %>
-        <%= form.text_field :rg, :maxlength => 12 %>
+        <%= form.text_field :rg, :maxlength => 12, class:'rg' %>
     </li>
     <li class="form-field">
         <%= form.label :nacionalidade %>
@@ -62,7 +62,7 @@
     </li>
     <li class="form-field">
         <%= form.label :datanascimento, 'Data de nascimento' %>
-        <%= form.text_field :datanascimento, :maxlength => 10 %>
+        <%= form.text_field :datanascimento, :maxlength => 10, class:'date' %>
     </li>
     <li class="form-field">
         <%= form.label :estadocivil, 'Estado civil' %>

@@ -145,6 +145,7 @@ GEM
       mini_mime (>= 0.1.1)
     marcel (0.3.3)
       mimemagic (~> 0.3.2)
+    maskedinput-rails (1.4.1.0)
     method_source (1.0.0)
     middleware (0.1.0)
     mime-types (3.3.1)
@@ -306,6 +307,7 @@ DEPENDENCIES
   jasmine
   jbuilder (~> 2.7)
   listen (~> 3.2)
+  maskedinput-rails
   pg (~> 1.2.3)
   puma (~> 4.1)
   rack-cors
