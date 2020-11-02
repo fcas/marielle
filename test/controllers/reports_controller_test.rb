@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class WelcomeControllerTest < ActiveSupport::TestCase
+class ReportsControllerTest < ActiveSupport::TestCase
   test "the truth" do
     assert true
   end

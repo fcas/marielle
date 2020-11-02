@@ -1,0 +1,7 @@
+class ReportsController < ApplicationController
+  def periods_of_violence
+  end
+
+  def geolocalization_of_violence
+  end
+end
