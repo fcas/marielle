@@ -12,16 +12,16 @@
   <ul class="flex-outer">
     <li class="form-field">
         <%= form.label :dataocorrencia, 'Data da ocorrência' %>
-        <%= form.text_area :dataocorrencia %>
+        <%= form.text_field :dataocorrencia, :maxlength => 10 %>
     </li>
     <li class="form-field">
         <%= form.label :horaocorrencia, 'Hora da ocorrência' %>
-        <%= form.text_area :horaocorrencia %>
+        <%= form.text_field :horaocorrencia, :maxlength => 5 %>
     </li>
     <h2>Endereço</h2>
     <li class="form-field">
         <%= form.label :logradouro %>
-        <%= form.text_area :logradouro %>
+        <%= form.text_field :logradouro %>
     </li>
     <li class="form-field">
         <%= form.label :numero, 'Número' %>
@@ -29,48 +29,48 @@
     </li>
     <li class="form-field">
         <%= form.label :bairro %>
-        <%= form.text_area :bairro %>
+        <%= form.text_field :bairro %>
     </li>
     <li class="form-field">
         <%= form.label :cidade %>
-        <%= form.text_area :cidade %>
+        <%= form.text_field :cidade %>
     </li>
     <li class="form-field">
         <%= form.label :uf %>
-        <%= form.text_area :uf %>
+        <%= form.text_field :uf %>
     </li>
     <li class="form-field">
         <%= form.label :descricaolocal, 'Descrição do local' %>
-        <%= form.text_area :descricaolocal %>
+        <%= form.text_field :descricaolocal %>
     </li>
     <h2>Informações da vítima</h2>
     <li class="form-field">
         <%= form.label :nomepessoa, 'Nome' %>
-        <%= form.text_area :nomepessoa %>
+        <%= form.text_field :nomepessoa %>
     </li>
     <li class="form-field">
         <%= form.label :rg %>
-        <%= form.text_area :rg %>
+        <%= form.text_field :rg, :maxlength => 12 %>
     </li>
     <li class="form-field">
         <%= form.label :nacionalidade %>
-        <%= form.text_area :nacionalidade %>
+        <%= form.text_field :nacionalidade %>
     </li>
     <li class="form-field">
         <%= form.label :sexo %>
-        <%= form.text_area :sexo %>
+        <%= form.text_field :sexo %>
     </li>
     <li class="form-field">
         <%= form.label :datanascimento, 'Data de nascimento' %>
-        <%= form.text_area :datanascimento %>
+        <%= form.text_field :datanascimento, :maxlength => 10 %>
     </li>
     <li class="form-field">
         <%= form.label :estadocivil, 'Estado civil' %>
-        <%= form.text_area :estadocivil %>
+        <%= form.text_field :estadocivil %>
     </li>
     <li class="form-field">
         <%= form.label :profissao, 'Profissão' %>
-        <%= form.text_area :profissao %>
+        <%= form.text_field :profissao %>
     </li>
     <li class="form-submit">
         <%= form.submit 'Registrar' %>

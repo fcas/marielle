@@ -11,7 +11,7 @@ Quando('clico em salvar') do
     click_on 'Registrar'
 end
 
-Então('ela deve ter sido salva no banco de dados') do
+Então(/ela deve ter sido salva no banco de dados.*/) do
     ocorrencia = RawRegistrosOcorrenciasSspSpGovBr.order("id").last
     expect(ocorrencia.dataocorrencia).to eq('20/04/2020') 
     expect(ocorrencia.horaocorrencia).to eq('15:30') 
