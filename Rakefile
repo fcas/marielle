@@ -3,4 +3,14 @@
 
 require_relative 'config/application'
 
+require 'coveralls/rake/task'
+Coveralls::RakeTask.new
+
 Rails.application.load_tasks
+
+task :default => [:spec, :cucumber, :test, 'coveralls:push']
+
+desc 'run RSpec'
+task :spec do
+  sh 'rspec spec'
+end
