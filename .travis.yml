@@ -1,4 +1,5 @@
 language: ruby
+cache: bundler
 rvm:
   - 2.7.1
   - jruby
@@ -18,6 +19,11 @@ before_script:
   - psql -c 'create database development;' -U postgres
   - psql -c 'create database test;' -U postgres
   - psql -c 'create database production;' -U postgres
+
+script:
+  bundle exec rspec spec
+  bundle exec rails test
+  bundle exec cucumber
 
 before_install:
   - rvm install 2.7.1
