@@ -13,4 +13,6 @@ task :default => [:spec, :cucumber, :test, 'coveralls:push']
 desc 'run RSpec'
 task :spec do
   sh 'rspec spec'
+  sh 'rails test'
+  sh 'rake cucumber'
 end
