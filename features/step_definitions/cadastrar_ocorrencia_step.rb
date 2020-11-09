@@ -3,15 +3,21 @@ Dado('que estou na página de cadastro de ocorrência') do
 end
 
 Quando('preencho o campo {string} com {string}') do |campo, valor|
-    fill_in "raw_registros_ocorrencias_ssp_sp_gov_br_" + campo, :with => valor
+    #fill_in "raw_registros_ocorrencias_ssp_sp_gov_br_" + campo, :with => valor
     #find('input[name="' + campo + '"]').set(valor)
+    find('#raw_registros_ocorrencias_ssp_sp_gov_br_' + campo).send_keys(valor)
+end
+
+Quando('seleciono a opção {string} no campo {string}') do |valor, campo|
+    find('#raw_registros_ocorrencias_ssp_sp_gov_br_' + campo)
+        .find('option[value="' + valor + '"]').select_option
 end
 
 Quando('clico em salvar') do
     click_on 'Registrar'
 end
 
-Então('ela deve ter sido salva no banco de dados') do
+Então(/ela deve ter sido salva no banco de dados.*/) do
     ocorrencia = RawRegistrosOcorrenciasSspSpGovBr.order("id").last
     expect(ocorrencia.dataocorrencia).to eq('20/04/2020') 
     expect(ocorrencia.horaocorrencia).to eq('15:30') 
