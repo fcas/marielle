@@ -1,17 +1,17 @@
 <%= form_with(model: raw_registros_ocorrencias_ssp_sp_gov_br, local: true) do |form| %>
-  <% if raw_registros_ocorrencias_ssp_sp_gov_br.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(raw_registros_ocorrencias_ssp_sp_gov_br.errors.count, "error") %> prohibited this raw_registros_ocorrencias_ssp_sp_gov_br from being saved:</h2>
-      <ul>
-          <% raw_registros_ocorrencias_ssp_sp_gov_br.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-          <% end %>
-      </ul>
-    </div>
-  <% end %>
+  
   <ul class="flex-outer">
+    <% if raw_registros_ocorrencias_ssp_sp_gov_br.errors.any? %>
+        <li id="error_explanation">
+            <ul>
+                <% raw_registros_ocorrencias_ssp_sp_gov_br.errors.messages.values.each do |message| %>
+                <li><%= message[0] %></li>
+                <% end %>
+            </ul>
+        </li>
+    <% end %>
     <li class="form-field">
-        <%= form.label :dataocorrencia, 'Data da ocorrência' %>
+        <%= form.label :dataocorrencia, 'Data da ocorrência *' %>
         <%= form.text_field :dataocorrencia, placeholder: "Digite aqui...", :maxlength => 10, class:'date' %>
     </li>
     <li class="form-field">
@@ -32,11 +32,11 @@
         <%= form.text_field :bairro, placeholder: "Digite aqui..." %>
     </li>
     <li class="form-field">
-        <%= form.label :cidade %>
+        <%= form.label :cidade, 'Cidade *' %>
         <%= form.text_field :cidade, placeholder: "Digite aqui..." %>
     </li>
     <li class="form-field">
-        <%= form.label :uf %>
+        <%= form.label :uf, 'UF *' %>
         <%= form.select(:uf, ["AC", "AL", "AM", "AP", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA", "PB", "PR", "PE", "PI", "RJ", "RN", "RO", "RS", "RR", "SC", "SE", "SP", "TO"], {include_blank: "Selecione..."}) %>
     </li>
     <li class="form-field">
@@ -49,7 +49,7 @@
         <%= form.text_field :nomepessoa, placeholder: "Digite aqui..." %>
     </li>
     <li class="form-field">
-        <%= form.label :rg %>
+        <%= form.label :rg, 'RG *' %>
         <%= form.text_field :rg, placeholder: "Digite aqui...", :maxlength => 12, class:'rg' %>
     </li>
     <li class="form-field">

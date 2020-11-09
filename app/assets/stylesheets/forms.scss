@@ -27,7 +27,7 @@
     align-items: center;
 }
 
-.flex-outer > li:not(:last-child) {
+.flex-outer li:not(:last-child) {
     margin-bottom: 20px;
 }
 
@@ -38,11 +38,13 @@
     text-transform: uppercase;
 }
 
-.flex-outer > li > label + * {
+.flex-outer li label + *,
+.flex-outer li div.field_with_errors:last-child {
     flex: 3 0 220px;
 }
 
-.flex-outer > li > label {
+.flex-outer li label,
+.flex-outer li div.field_with_errors:first-child {
     flex: 1 0 120px;
     max-width: 220px;
 }
@@ -53,6 +55,7 @@
     border: 1px solid $highlightColor;
     border-radius: 6px;
     background: $lightColor;
+    width: 100%;
 }
 
 .flex-outer li select {
@@ -74,4 +77,18 @@
 
 .flex-outer li.form-submit input:hover {
     cursor: pointer;
+}
+
+#error_explanation {
+    border: 2px solid $highlightColor;
+    padding: .5rem;
+    margin-bottom: 1rem;
+    background-color: $red;
+    color: $highlightColor;
+    font-weight: 500;
+}
+
+.field_with_errors input:not([type='checkbox']),
+.field_with_errors select {
+    border: 2px solid $red !important; 
 }

@@ -34,3 +34,7 @@ Então(/ela deve ter sido salva no banco de dados.*/) do
     expect(ocorrencia.estadocivil).to eq('Casado') 
     expect(ocorrencia.profissao).to eq('Atendente de loja') 
 end
+
+Então('deverei ver a mensagem de erro {string}') do |mensagem|
+    expect(page).to have_content(mensagem) 
+end
