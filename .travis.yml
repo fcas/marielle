@@ -1,13 +1,13 @@
 language: ruby
+cache: bundler
 rvm:
   - 2.7.1
-  - jruby
 
 addons:
   firefox: latest
 
 env:
-  globoal:
+  global:
     - MOZ_HEADLESS=1
 
 services:

@@ -4,11 +4,11 @@ require 'rails/test_help'
 require 'coveralls'
 require 'simplecov'
 
-Coveralls.wear_merged!
+Coveralls.wear!
 
 class ActiveSupport::TestCase
   # Run tests in parallel with specified workers
-  parallelize(workers: 1)
+  parallelize(workers: :number_of_processors)
 
   # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
   fixtures :all
