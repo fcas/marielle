@@ -6,7 +6,7 @@
 
 require 'cucumber/rails'
 require 'selenium-webdriver'
-#require 'simplecov'
+require 'simplecov'
 
 # frozen_string_literal: true
 
