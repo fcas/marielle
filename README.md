@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.org/fcas/marielle.svg?branch=master)](https://travis-ci.org/fcas/marielle)
 [![Maintainability](https://api.codeclimate.com/v1/badges/34eb75f7b9dcb213765d/maintainability)](https://codeclimate.com/github/fcas/marielle/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/34eb75f7b9dcb213765d/test_coverage)](https://codeclimate.com/github/fcas/marielle/test_coverage)
-[![Coverage Status](https://coveralls.io/repos/github/fcas/marielle/badge.svg?branch=master)](https://coveralls.io/github/fcas/marielle?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/fcas/marielle/badge.svg)](https://coveralls.io/github/fcas/marielle)
 [![GitHub](https://img.shields.io/github/license/fcas/marielle)](LICENSE)
 
 # Marielle
