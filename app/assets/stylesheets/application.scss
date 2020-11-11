@@ -1,6 +1,6 @@
 /*
 *= depend_on variables.scss
-*= depend_on scaffolding.scss
+*= depend_on grid.scss
 *= depend_on navbar.scss
 *= depend_on forms.scss
 *= depend_on tables.scss
@@ -14,7 +14,7 @@
 @import "variables.scss";
 
 //Grid and page structure
-@import "scaffolding.scss";
+@import "grid.scss";
 
 // Patterns and elements
 @import "navbar.scss";
@@ -37,4 +37,10 @@ h1 {
     font-size: $titleSize;
     color: $highlightColor;
     padding: .5rem 0;
+}
+
+h2 {
+    font-size: $subtitleSize;
+    color: $highlightColor;
+    padding: 1rem 0 .5rem .5rem;
 }
