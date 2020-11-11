@@ -4,4 +4,7 @@ class ReportsController < ApplicationController
 
   def geolocalization_of_violence
   end
+
+  def census
+  end
 end
