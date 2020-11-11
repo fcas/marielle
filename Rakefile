@@ -8,11 +8,10 @@ Coveralls::RakeTask.new
 
 Rails.application.load_tasks
 
-task :default => [:spec, :cucumber, :test, 'coveralls:push']
+task :default => [:spec, 'coveralls:push']
 
 desc 'run RSpec'
 task :spec do
   sh 'rspec spec'
-  sh 'rails test'
   sh 'rake cucumber'
 end
