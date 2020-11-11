@@ -20,10 +20,6 @@ before_script:
   - psql -c 'create database test;' -U postgres
   - psql -c 'create database production;' -U postgres
 
-branches:
-  only:
-  - master
-
 before_install:
   - rvm install 2.7.1
   - rvm use 2.7.1
