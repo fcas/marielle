@@ -14,4 +14,5 @@ desc 'run RSpec'
 task :spec do
   sh 'rspec spec'
   sh 'rake cucumber'
+  sh 'rails test'
 end

@@ -8,6 +8,8 @@ require 'cucumber/rails'
 require 'selenium-webdriver'
 require 'simplecov'
 
+SimpleCov.command_name "features"
+
 # frozen_string_literal: true
 
 # Capybara defaults to CSS3 selectors rather than XPath.

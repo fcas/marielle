@@ -5,6 +5,7 @@ require 'coveralls'
 
 begin
   require 'simplecov'
+  SimpleCov.command_name 'test:units'
   SimpleCov.formatter = Coveralls::SimpleCov::Formatter
   SimpleCov.start do
     add_filter %r{^/test/}
