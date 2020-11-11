@@ -9,11 +9,15 @@ addons:
 env:
   global:
     - MOZ_HEADLESS=1
+    - CC_TEST_REPORTER_ID=0d17c34467bbfdf1e57d7565f12fe6359e2f6ebdb298735c04093c2f2b261c5a
 
 services:
   - postgresql
 
 before_script:
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
   - psql -c 'create database travis_ci_test;' -U postgres
   - psql -c 'create database development;' -U postgres
   - psql -c 'create database test;' -U postgres
@@ -27,3 +31,12 @@ before_install:
   - mkdir geckodriver
   - tar -xzf geckodriver-v0.27.0-linux32.tar.gz -C geckodriver
   - export PATH=$PATH:$PWD/geckodriver
+
+script:
+  - bundle exec rake
+
+after_script:
+  - ./cc-test-reporter format-coverage -t simplecov -o coverage/codeclimate.backend.json coverage/backend/.resultset.json
+  - ./cc-test-reporter format-coverage -t lcov -o coverage/codeclimate.frontend.json coverage/frontend/lcov.info
+  - ./cc-test-reporter sum-coverage coverage/codeclimate.*.json -p 2
+  - if [[ "$TRAVIS_TEST_RESULT" == 0 ]]; then ./cc-test-reporter upload-coverage; fi
