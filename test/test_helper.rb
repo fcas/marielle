@@ -12,7 +12,7 @@ begin
   end
 end
 
-Coveralls.wear!
+Coveralls.wear_merged!
 
 class ActiveSupport::TestCase
   # Run tests in parallel with specified workers
