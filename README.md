@@ -17,8 +17,7 @@ Funcionalidades a serem desenvolvidas (ainda estão em discussão e sujeitas a m
 - Hub de psicológos
 
 ## Aplicações:
-- [marielle (web)](https://marielle-app.herokuapp.com)
-- [marielle (api)](https://mariellle.herokuapp.com): algumas funcionalidades ainda não foram migradas para o frontend
+- [marielle (api)](https://mariellle.herokuapp.com)
 - [marielle-superset (dataviz)](https://marielle-superset.herokuapp.com)
 
 ## Repositórios complementares
@@ -31,7 +30,7 @@ Funcionalidades a serem desenvolvidas (ainda estão em discussão e sujeitas a m
 - [Felipe Cordeiro Alves Dias](https://github.com/fcas) - fcas (USP-EACH-SIN5005)
 - [Laísa Dias Brito Alves](https://github.com/laisacavazotto) - laisacavazotto (Community - UX Designer)
 - [Larissa Mangolim Amaral](https://github.com/sadlune) - sadlune (USP-EACH-SIN5005)
-- [Leonardo Colman Lopes](https://github.com/LeoColman) - LeoColman (USP-EACH-SIN5005)
+- [Não ativo] [Leonardo Colman Lopes](https://github.com/LeoColman) - LeoColman (USP-EACH-SIN5005)
 
 ## Projeto
 - [Pivotal](https://www.pivotaltracker.com/n/projects/2468288)

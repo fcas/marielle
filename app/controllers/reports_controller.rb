@@ -7,4 +7,7 @@ class ReportsController < ApplicationController
 
   def census
   end
+
+  def victim
+  end
 end
