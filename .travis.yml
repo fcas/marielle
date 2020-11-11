@@ -20,11 +20,6 @@ before_script:
   - psql -c 'create database test;' -U postgres
   - psql -c 'create database production;' -U postgres
 
-script:
-  bundle exec rspec spec
-  bundle exec rails test
-  bundle exec cucumber
-
 branches:
   only:
   - master
