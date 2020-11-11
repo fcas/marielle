@@ -8,7 +8,7 @@ addons:
   firefox: latest
 
 env:
-  globoal:
+  global:
     - MOZ_HEADLESS=1
 
 services:
@@ -24,6 +24,10 @@ script:
   bundle exec rspec spec
   bundle exec rails test
   bundle exec cucumber
+
+branches:
+  only:
+  - master
 
 before_install:
   - rvm install 2.7.1
