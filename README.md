@@ -1,6 +1,5 @@
 [![Build Status](https://travis-ci.org/fcas/marielle.svg?branch=master)](https://travis-ci.org/fcas/marielle)
 [![Maintainability](https://api.codeclimate.com/v1/badges/34eb75f7b9dcb213765d/maintainability)](https://codeclimate.com/github/fcas/marielle/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/34eb75f7b9dcb213765d/test_coverage)](https://codeclimate.com/github/fcas/marielle/test_coverage)
 [![Coverage Status](https://coveralls.io/repos/github/fcas/marielle/badge.svg)](https://coveralls.io/github/fcas/marielle)
 [![GitHub](https://img.shields.io/github/license/fcas/marielle)](LICENSE)
 
@@ -21,7 +20,6 @@ Funcionalidades a serem desenvolvidas (ainda estão em discussão e sujeitas a m
 - [marielle-superset (dataviz)](https://marielle-superset.herokuapp.com)
 
 ## Repositórios complementares
-- [marielle-app](http://github.com/sadlune/marielle-app)
 - [marielle-superset](http://github.com/fcas/marielle-superset)
 
 ## Colaboradores
