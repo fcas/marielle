@@ -36,3 +36,23 @@ E preencho o campo "cidade" com "Carapicuíba"
 E seleciono a opção "SP" no campo "uf"
 E clico em salvar
 Então deverei ver a mensagem de erro "É necessário informar o RG da vítima"
+
+Cenário: Cadastro de ocorrência com erro - data da ocorrência com tamanho menor
+Dado que estou na página de cadastro de ocorrência
+Quando preencho o campo "dataocorrencia" com "2004202"
+E preencho o campo "cidade" com "Carapicuíba"
+E seleciono a opção "SP" no campo "uf"
+E preencho o campo "rg" com "343825843"
+E clico em salvar
+Então deverei ver a mensagem de erro "É necessário informar a data da ocorrência"
+
+Cenário: Cadastro de ocorrência com erro - RG com tamanho menor
+Dado que estou na página de cadastro de ocorrência
+Quando preencho o campo "dataocorrencia" com "20042020"
+E preencho o campo "cidade" com "Carapicuíba"
+E seleciono a opção "SP" no campo "uf"
+E preencho o campo "rg" com "34382584"
+E clico em salvar
+Então deverei ver a mensagem de erro "É necessário informar o RG da vítima"
+
+
