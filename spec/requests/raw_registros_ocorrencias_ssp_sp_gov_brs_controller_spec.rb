@@ -135,7 +135,7 @@ RSpec.describe RawRegistrosOcorrenciasSspSpGovBrsController, type: :request do
         assert_template :new
       end
 
-      it "given JSON request without without #{missing_field}, should not create" do
+      it "given JSON request without #{missing_field}, should not create" do
         expect {
           post raw_registros_ocorrencias_ssp_sp_gov_brs_url, params: { format: :json, raw_registros_ocorrencias_ssp_sp_gov_br: raw_registros_ocorrencias_ssp_sp_gov_br }
         }. to change {RawRegistrosOcorrenciasSspSpGovBr.count}.by(0)
@@ -149,5 +149,79 @@ RSpec.describe RawRegistrosOcorrenciasSspSpGovBrsController, type: :request do
         assert data[missing_field][0].include?('É necessário informar')
       end
     end
+
+    [
+      'dataocorrencia', 'uf', 'rg'
+    ].each do |validated_field| 
+
+      raw_registros_ocorrencias_ssp_sp_gov_br = { }
+      raw_registros_ocorrencias_ssp_sp_gov_br['dataocorrencia'] = '20/04/2020'
+      raw_registros_ocorrencias_ssp_sp_gov_br['cidade'] = 'Carapicuíba'
+      raw_registros_ocorrencias_ssp_sp_gov_br['uf'] = 'SP'
+      raw_registros_ocorrencias_ssp_sp_gov_br['rg'] = '34.382.584-3'
+
+      raw_registros_ocorrencias_ssp_sp_gov_br[validated_field] = (raw_registros_ocorrencias_ssp_sp_gov_br[validated_field])[0..-2]
+
+      it "given raw_registros_ocorrencias_ssp_sp_gov_br with #{validated_field} lower length, should not create" do
+        expect {
+          post raw_registros_ocorrencias_ssp_sp_gov_brs_url, params: { raw_registros_ocorrencias_ssp_sp_gov_br: raw_registros_ocorrencias_ssp_sp_gov_br }
+        }. to change {RawRegistrosOcorrenciasSspSpGovBr.count}.by(0)
+
+        assert_template :new
+      end
+
+      it "given JSON request with #{validated_field} lower length, should not create" do
+        expect {
+          post raw_registros_ocorrencias_ssp_sp_gov_brs_url, params: { format: :json, raw_registros_ocorrencias_ssp_sp_gov_br: raw_registros_ocorrencias_ssp_sp_gov_br }
+        }. to change {RawRegistrosOcorrenciasSspSpGovBr.count}.by(0)
+        
+        assert_equal 422, @response.status
+
+        body = JSON.parse(@response.body)
+        assert body['message'].include?('Erro')
+
+        data = body['data']
+        assert data[validated_field][0].include?('is too short')
+        
+      end
+    end
+
+    [
+      'dataocorrencia', 'uf', 'rg', 'horaocorrencia', 'datanascimento'
+    ].each do |validated_field| 
+
+      raw_registros_ocorrencias_ssp_sp_gov_br = { }
+      raw_registros_ocorrencias_ssp_sp_gov_br['dataocorrencia'] = '20/04/2020'
+      raw_registros_ocorrencias_ssp_sp_gov_br['cidade'] = 'Carapicuíba'
+      raw_registros_ocorrencias_ssp_sp_gov_br['uf'] = 'SP'
+      raw_registros_ocorrencias_ssp_sp_gov_br['rg'] = '34.382.584-3'
+      raw_registros_ocorrencias_ssp_sp_gov_br['horaocorrencia'] = '15:30'
+      raw_registros_ocorrencias_ssp_sp_gov_br['datanascimento'] = '20/04/1970'
+
+      raw_registros_ocorrencias_ssp_sp_gov_br[validated_field] = (raw_registros_ocorrencias_ssp_sp_gov_br[validated_field]) + 'A'
+
+      it "given raw_registros_ocorrencias_ssp_sp_gov_br with #{validated_field} higher length, should not create" do
+        expect {
+          post raw_registros_ocorrencias_ssp_sp_gov_brs_url, params: { raw_registros_ocorrencias_ssp_sp_gov_br: raw_registros_ocorrencias_ssp_sp_gov_br }
+        }. to change {RawRegistrosOcorrenciasSspSpGovBr.count}.by(0)
+
+        assert_template :new
+      end
+
+      it "given JSON request with #{validated_field} higher length, should not create" do
+        expect {
+          post raw_registros_ocorrencias_ssp_sp_gov_brs_url, params: { format: :json, raw_registros_ocorrencias_ssp_sp_gov_br: raw_registros_ocorrencias_ssp_sp_gov_br }
+        }. to change {RawRegistrosOcorrenciasSspSpGovBr.count}.by(0)
+        
+        assert_equal 422, @response.status
+
+        body = JSON.parse(@response.body)
+        assert body['message'].include?('Erro')
+
+        data = body['data']
+        assert data[validated_field][0].include?('is too long')
+      end
+    end
+
   end
 end
