@@ -11,7 +11,7 @@ Então('deverei ver a página de detalhamento da ocorrência') do
     expect(page).to have_content('15:30') 
     expect(page).to have_content('Rua Antônio Guerra') 
     expect(page).to have_content('Jardim Tucunduva') 
-    expect(page).to have_content('Carapicuíba') 
+    expect(page).to have_content('Carapicuiba') 
     expect(page).to have_content('SP') 
     expect(page).to have_content('34.382.584-3') 
     expect(page).to have_content('Fedentina de Jesus') 
