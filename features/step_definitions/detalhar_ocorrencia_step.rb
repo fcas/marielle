@@ -21,3 +21,7 @@ Então('deverei ver a página de detalhamento da ocorrência') do
     expect(page).to have_content('Casado') 
     expect(page).to have_content('Atendente de loja') 
 end
+
+Então('deverei estar na página de detalhamento da ocorrência') do
+    expect(page).to have_current_path(raw_registros_ocorrencias_ssp_sp_gov_br_path(RawRegistrosOcorrenciasSspSpGovBr.last))
+end

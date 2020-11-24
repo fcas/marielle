@@ -7,6 +7,7 @@ Dado('que tenho uma ocorrência cadastrada com campo {string} preenchido com val
         E seleciono a opção "SP" no campo "uf"
         E preencho o campo "rg" com "34.382.584-3"
         E clico em salvar
+        Então deverei estar na página de detalhamento da ocorrência
     }
 end
 
@@ -19,6 +20,7 @@ Dado('que tenho uma ocorrência cadastrada com campo {string} selecionado com va
         E preencho o campo "rg" com "34.382.584-3"
         E seleciono a opção "#{valor}" no campo "#{campo}"
         E clico em salvar
+        Então deverei estar na página de detalhamento da ocorrência
     }
 end
 
