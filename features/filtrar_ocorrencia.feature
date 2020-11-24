@@ -33,8 +33,8 @@ Então deverei ver a ocorrência com campo "bairro" de valor "Jacarei"
 E deverei não ver a ocorrência com campo "bairro" de valor "Jardim Tucunduva"
 
 Cenário: Filtrar ocorrência pela cidade
-Dado que tenho uma ocorrência cadastrada com campo "cidade" preenchido com valor "Poa"
-E que tenho uma ocorrência cadastrada com campo "cidade" preenchido com valor "Carapicuiba"
+Dado que tenho uma ocorrência cadastrada com campo cidade preenchido com valor "Poa"
+E que tenho uma ocorrência cadastrada com campo cidade preenchido com valor "Carapicuiba"
 E que estou na página de listagem de ocorrências
 Quando eu preencho o filtro de "cidade" com "Poa"
 E clico em buscar

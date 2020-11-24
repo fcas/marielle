@@ -1,3 +1,15 @@
+Dado('que tenho uma ocorrência cadastrada com campo cidade preenchido com valor {string}') do |valor|
+    steps %Q{
+        Dado que estou na página de cadastro de ocorrência
+        E preencho o campo "dataocorrencia" com "20/04/2020"
+        E preencho o campo "cidade" com "#{valor}"
+        E seleciono a opção "SP" no campo "uf"
+        E preencho o campo "rg" com "34.382.584-3"
+        E clico em salvar
+        Então deverei estar na página de detalhamento da ocorrência
+    }
+end
+
 Dado('que tenho uma ocorrência cadastrada com campo {string} preenchido com valor {string}') do |campo, valor|
     steps %Q{
         Dado que estou na página de cadastro de ocorrência
