@@ -5,6 +5,45 @@
 
   <%= link_to 'NOVO REGISTRO', new_raw_registros_ocorrencias_ssp_sp_gov_br_path, class: "btn"%>
 
+  <div class="form form-component">
+    <div class="form-header">
+        <h2>Filtros</h2>
+    </div>
+    <div class="form-content">
+      <%= form_tag('/raw_registros_ocorrencias_ssp_sp_gov_brs', :method => "get") do %>
+        <ul class="flex-outer">
+          <li class="form-field">
+            <%= label_tag(:numero_boletim, 'N° boletim') %>
+            <%= text_field_tag(:numero_boletim) %>
+          </li>
+          <li class="form-field">
+            <%= label_tag(:dataocorrencia, 'Data') %>
+            <%= text_field_tag(:dataocorrencia) %>
+          </li>
+          <li class="form-field">
+            <%= label_tag(:bairro, 'Bairro') %>
+            <%= text_field_tag(:bairro) %>
+          </li>
+          <li class="form-field">
+            <%= label_tag(:cidade, 'Cidade') %>
+            <%= text_field_tag(:cidade) %>
+          </li>
+          <li class="form-field">
+            <%= label_tag(:uf, 'UF') %>
+            <%= text_field_tag(:uf) %>
+          </li>
+          <li class="form-field">
+            <%= label_tag(:rg, 'RG') %>
+            <%= text_field_tag(:rg) %>
+          </li>
+          <li class="form-submit">
+            <%= submit_tag 'Buscar' %>
+          </li>
+        </ul>
+      <% end %>
+    </div>
+  </div>
+
   <table>
     <thead>
       <tr>

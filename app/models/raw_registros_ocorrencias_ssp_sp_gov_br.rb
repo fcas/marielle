@@ -10,4 +10,11 @@ class RawRegistrosOcorrenciasSspSpGovBr < ApplicationRecord
 
     validates_length_of :horaocorrencia, maximum: 5, allow_blank: true
     validates_length_of :datanascimento, maximum: 10, allow_blank: true
+
+    scope :filter_by_numero_boletim, -> (numero_boletim) { where numero_boletim: numero_boletim }
+    scope :filter_by_dataocorrencia, -> (dataocorrencia) { where dataocorrencia: dataocorrencia }
+    scope :filter_by_bairro, -> (bairro) { where bairro: bairro }
+    scope :filter_by_cidade, -> (cidade) { where cidade: cidade }
+    scope :filter_by_uf, -> (uf) { where uf: uf }
+    scope :filter_by_rg, -> (rg) { where rg: rg }
 end

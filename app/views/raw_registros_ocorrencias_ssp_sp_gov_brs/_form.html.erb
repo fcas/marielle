@@ -11,6 +11,10 @@
         </li>
     <% end %>
     <li class="form-field">
+        <%= form.label :numero_boletim, 'N° boletim' %>
+        <%= form.text_field :numero_boletim, placeholder: "Digite aqui..."%>
+    </li>
+    <li class="form-field">
         <%= form.label :dataocorrencia, 'Data da ocorrência *' %>
         <%= form.text_field :dataocorrencia, placeholder: "Digite aqui...", :maxlength => 10, class:'date' %>
     </li>
