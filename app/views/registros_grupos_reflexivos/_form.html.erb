@@ -1,0 +1,45 @@
+<%= form_with(model: registros_grupos_reflexivos, local: true) do |form| %>
+  
+  <ul class="flex-outer">
+    <% if registros_grupos_reflexivos.errors.any? %>
+        <li id="error_explanation">
+            <ul>
+                <% registros_grupos_reflexivos.errors.messages.values.each do |message| %>
+                <li><%= message[0] %></li>
+                <% end %>
+            </ul>
+        </li>
+    <% end %>
+    <li class="form-field">
+      <%= form.label :nomegruporeflexivo, 'Nome do grupo reflexivo' %>
+      <%= form.text_field :nomegruporeflexivo, placeholder: "Digite aqui..." %>
+    </li>
+    <li class="form-field">
+      <%= form.label :telefone, 'Telefone' %>
+      <%= form.text_field :telefone, placeholder: "Digite aqui...", :maxlength => 11, class:'phone' %>
+    </li>
+    <li class="form-field">
+        <%= form.label :logradouro %>
+        <%= form.text_field :logradouro, placeholder: "Digite aqui..." %>
+    </li>
+    <li class="form-field">
+        <%= form.label :numero, 'Número' %>
+        <%= form.number_field :numero, placeholder: "Digite aqui..." %>
+    </li>
+    <li class="form-field">
+        <%= form.label :bairro %>
+        <%= form.text_field :bairro, placeholder: "Digite aqui..." %>
+    </li>
+    <li class="form-field">
+        <%= form.label :cidade, 'Cidade *' %>
+        <%= form.text_field :cidade, placeholder: "Digite aqui..." %>
+    </li>
+    <li class="form-field">
+        <%= form.label :uf, 'UF *' %>
+        <%= form.select(:uf, ["AC", "AL", "AM", "AP", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA", "PB", "PR", "PE", "PI", "RJ", "RN", "RO", "RS", "RR", "SC", "SE", "SP", "TO"], {include_blank: "Selecione..."}) %>
+    </li>
+    <li class="form-submit">
+        <%= form.submit 'Registrar' %>
+    </li>
+  </ul>
+<% end %>

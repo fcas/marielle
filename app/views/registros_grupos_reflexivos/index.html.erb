@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+<h1>Grupos Reflexivos</h1>
+
+<div class="table">
+
+  <%= link_to 'NOVO REGISTRO', new_registros_grupos_reflexivo_path, class: "btn"%>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Nome do grupo reflexivo</th>
+        <th>Telefone</th>
+        <th>Logradouro</th>
+        <th>Número</th>
+        <th>Bairro</th>
+        <th>Cidade</th>
+        <th>UF</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @registros_grupos_reflexivos.each do |registros_grupos_reflexivo| %>
+        <tr>
+          <td><%= registros_grupos_reflexivo.nomegruporeflexivo %></td>
+          <td><%= registros_grupos_reflexivo.telefone %></td>
+          <td><%= registros_grupos_reflexivo.logradouro %></td>
+          <td><%= registros_grupos_reflexivo.numero %></td>
+          <td><%= registros_grupos_reflexivo.bairro %></td>
+          <td><%= registros_grupos_reflexivo.cidade %></td>
+          <td><%= registros_grupos_reflexivo.uf %></td>
+          <td>
+            <%= link_to registros_grupos_reflexivo do %>
+              <img class="icon detalhar" src=" <%= asset_path('search.svg') %>"/>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+</div>
