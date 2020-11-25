@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe RawRegistrosOcorrenciasSspSpGovBrsController, type: :request do
 
   before(:all) do
-    @raw_registros_ocorrencias_ssp_sp_gov_br = RawRegistrosOcorrenciasSspSpGovBr.create dataocorrencia: '20/04/2020', horaocorrencia: '15:30', logradouro: 'Rua Antônio Guerra', numero: 166, bairro: 'Jardim Tucunduva', cidade: 'Carapicuíba', uf: 'SP', nomepessoa: 'Fedentina de Jesus', rg: '34.382.584-3', nacionalidade: 'Brasileira', sexo: 'Feminino', datanascimento: '20/04/1970', estadocivil: 'Casado', profissao: 'Atendente de loja'
+    @raw_registros_ocorrencias_ssp_sp_gov_br = RawRegistrosOcorrenciasSspSpGovBr.create numero_boletim: '1234', dataocorrencia: '20/04/2020', horaocorrencia: '15:30', logradouro: 'Rua Antônio Guerra', numero: 166, bairro: 'Jardim Tucunduva', cidade: 'Carapicuiba', uf: 'SP', nomepessoa: 'Fedentina de Jesus', rg: '34.382.584-3', nacionalidade: 'Brasileira', sexo: 'Feminino', datanascimento: '20/04/1970', estadocivil: 'Casado', profissao: 'Atendente de loja'
   end
 
   describe "GET /" do
@@ -17,6 +17,21 @@ RSpec.describe RawRegistrosOcorrenciasSspSpGovBrsController, type: :request do
         assert_response :success
         data = JSON.parse(@response.body)
         assert data.size > 0
+    end
+
+    describe "visit index" do
+
+      raw_registros_ocorrencias_ssp_sp_gov_br_alt = RawRegistrosOcorrenciasSspSpGovBr.create numero_boletim: '4321', dataocorrencia: '19/04/2020', horaocorrencia: '15:30', logradouro: 'Rua Antônio Guerra', numero: 166, bairro: 'Jacarei', cidade: 'Poa', uf: 'RJ', nomepessoa: 'Fedentina de Jesus', rg: '13.036.974-3', nacionalidade: 'Brasileira', sexo: 'Feminino', datanascimento: '20/04/1970', estadocivil: 'Casado', profissao: 'Atendente de loja'
+      [
+        'numero_boletim', 'dataocorrencia', 'bairro', 'cidade', 'uf', 'rg'
+      ].each do |missing_field| 
+    
+        it "should get index filtered by #{missing_field}" do
+          visit "/raw_registros_ocorrencias_ssp_sp_gov_brs?#{missing_field}=#{@raw_registros_ocorrencias_ssp_sp_gov_br[missing_field]}"
+          expect(page).to have_content(@raw_registros_ocorrencias_ssp_sp_gov_br[missing_field]) 
+          expect(page).to have_no_content(raw_registros_ocorrencias_ssp_sp_gov_br_alt[missing_field]) 
+        end
+      end
     end
   end
 
@@ -124,7 +139,7 @@ RSpec.describe RawRegistrosOcorrenciasSspSpGovBrsController, type: :request do
       'dataocorrencia', 'cidade', 'uf', 'rg'
     ].each do |missing_field| 
 
-      raw_registros_ocorrencias_ssp_sp_gov_br = { dataocorrencia: '20/04/2020', cidade: 'Carapicuíba', uf: 'SP', rg: '34.382.584-3' }
+      raw_registros_ocorrencias_ssp_sp_gov_br = { dataocorrencia: '20/04/2020', cidade: 'Carapicuiba', uf: 'SP', rg: '34.382.584-3' }
       raw_registros_ocorrencias_ssp_sp_gov_br[missing_field] = nil
 
       it "given raw_registros_ocorrencias_ssp_sp_gov_br without #{missing_field}, should not create" do
@@ -156,7 +171,7 @@ RSpec.describe RawRegistrosOcorrenciasSspSpGovBrsController, type: :request do
 
       raw_registros_ocorrencias_ssp_sp_gov_br = { }
       raw_registros_ocorrencias_ssp_sp_gov_br['dataocorrencia'] = '20/04/2020'
-      raw_registros_ocorrencias_ssp_sp_gov_br['cidade'] = 'Carapicuíba'
+      raw_registros_ocorrencias_ssp_sp_gov_br['cidade'] = 'Carapicuiba'
       raw_registros_ocorrencias_ssp_sp_gov_br['uf'] = 'SP'
       raw_registros_ocorrencias_ssp_sp_gov_br['rg'] = '34.382.584-3'
 
@@ -192,7 +207,7 @@ RSpec.describe RawRegistrosOcorrenciasSspSpGovBrsController, type: :request do
 
       raw_registros_ocorrencias_ssp_sp_gov_br = { }
       raw_registros_ocorrencias_ssp_sp_gov_br['dataocorrencia'] = '20/04/2020'
-      raw_registros_ocorrencias_ssp_sp_gov_br['cidade'] = 'Carapicuíba'
+      raw_registros_ocorrencias_ssp_sp_gov_br['cidade'] = 'Carapicuiba'
       raw_registros_ocorrencias_ssp_sp_gov_br['uf'] = 'SP'
       raw_registros_ocorrencias_ssp_sp_gov_br['rg'] = '34.382.584-3'
       raw_registros_ocorrencias_ssp_sp_gov_br['horaocorrencia'] = '15:30'

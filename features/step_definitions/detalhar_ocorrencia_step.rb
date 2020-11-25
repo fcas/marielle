@@ -11,7 +11,7 @@ Então('deverei ver a página de detalhamento da ocorrência') do
     expect(page).to have_content('15:30') 
     expect(page).to have_content('Rua Antônio Guerra') 
     expect(page).to have_content('Jardim Tucunduva') 
-    expect(page).to have_content('Carapicuíba') 
+    expect(page).to have_content('Carapicuiba') 
     expect(page).to have_content('SP') 
     expect(page).to have_content('34.382.584-3') 
     expect(page).to have_content('Fedentina de Jesus') 
@@ -20,4 +20,8 @@ Então('deverei ver a página de detalhamento da ocorrência') do
     expect(page).to have_content('20/04/1970') 
     expect(page).to have_content('Casado') 
     expect(page).to have_content('Atendente de loja') 
+end
+
+Então('deverei estar na página de detalhamento da ocorrência') do
+    expect(page).to have_current_path(raw_registros_ocorrencias_ssp_sp_gov_br_path(RawRegistrosOcorrenciasSspSpGovBr.last))
 end

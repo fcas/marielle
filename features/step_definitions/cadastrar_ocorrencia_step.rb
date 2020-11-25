@@ -24,7 +24,7 @@ Então(/ela deve ter sido salva no banco de dados.*/) do
     expect(ocorrencia.logradouro).to eq('Rua Antônio Guerra') 
     expect(ocorrencia.numero).to eq(166) 
     expect(ocorrencia.bairro).to eq('Jardim Tucunduva') 
-    expect(ocorrencia.cidade).to eq('Carapicuíba') 
+    expect(ocorrencia.cidade).to eq('Carapicuiba') 
     expect(ocorrencia.uf).to eq('SP') 
     expect(ocorrencia.nomepessoa).to eq('Fedentina de Jesus') 
     expect(ocorrencia.rg).to eq('34.382.584-3') 
