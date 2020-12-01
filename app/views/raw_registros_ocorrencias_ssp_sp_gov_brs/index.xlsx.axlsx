@@ -1,0 +1,11 @@
+wb = xlsx_package.workbook
+
+wb.add_worksheet(name: "Ocorrências") do |sheet|
+  # head row of spreadsheet
+  sheet.add_row %w(Número Data Bairro Cidade UF RG)
+  
+  # list rows
+  @raw_registros_ocorrencias_ssp_sp_gov_brs.each do |raw_registros_ocorrencias_ssp_sp_gov_brs|
+    sheet.add_row [raw_registros_ocorrencias_ssp_sp_gov_brs.numero_boletim, raw_registros_ocorrencias_ssp_sp_gov_brs.dataocorrencia, raw_registros_ocorrencias_ssp_sp_gov_brs.bairro, raw_registros_ocorrencias_ssp_sp_gov_brs.cidade, raw_registros_ocorrencias_ssp_sp_gov_brs.uf, raw_registros_ocorrencias_ssp_sp_gov_brs.rg]
+  end
+end
