@@ -29,16 +29,23 @@ class RegistrosGruposReflexivosController < ApplicationController
   # POST /registros_grupos_reflexivos
   # POST /registros_grupos_reflexivos.json
   def create
-    @registros_grupos_reflexivos = RegistrosGruposReflexivo.new
+    @registros_grupos_reflexivo = RegistrosGruposReflexivo.new(registros_grupos_reflexivo_params)
     respond_to do |format|
-      if @registros_grupos_reflexivos.save
-        format.html { redirect_to @registros_grupos_reflexivos, notice: 'Grupo reflexivo was successfully created.' }
-        format.json { render json: {message: 'Grupo reflexivo registrado com sucesso!', data:@registros_grupos_reflexivos}, status: :created }
+      if @registros_grupos_reflexivo.save
+        format.html { redirect_to @registros_grupos_reflexivo, notice: 'Grupo reflexivo was successfully created.' }
+        format.json { render json: {message: 'Grupo reflexivo registrado com sucesso!', data:@registros_grupos_reflexivo}, status: :created }
       else
         format.html { render :new }
-        format.json { render json: {message: 'Erro ao salvar ocorrência', data:@registros_grupos_reflexivos.errors}, status: :unprocessable_entity }
+        format.json { render json: {message: 'Erro ao salvar ocorrência', data:@registros_grupos_reflexivo.errors}, status: :unprocessable_entity }
       end
     end
+  end
+
+  private
+
+  # Only allow a list of trusted parameters through.
+  def registros_grupos_reflexivo_params
+    params.require(:registros_grupos_reflexivo).permit(:telefone, :logradouro, :numero, :bairro, :cidade, :uf, :nomegruporeflexivo)
   end
 
 end
