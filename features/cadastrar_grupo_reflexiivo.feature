@@ -17,5 +17,3 @@ E preencho o campo "nomegruporeflexivo" com "MEMOH" do formulário do grupo refl
 E clico em salvar
 Então o grupo reflexivo deve ter sido salvo no banco de dados
 E deverei ver a página de detalhamento do grupo reflexivo
-
-  :nomegruporeflexivo, :telefone, :logradouro, :numero, :bairro, :cidade, :uf
