@@ -17,4 +17,13 @@ class RawRegistrosOcorrenciasSspSpGovBr < ApplicationRecord
     scope :filter_by_cidade, -> (cidade) { where cidade: cidade }
     scope :filter_by_uf, -> (uf) { where uf: uf }
     scope :filter_by_rg, -> (rg) { where rg: rg }
+
+    def self.as_csv
+        CSV.generate do |data|
+            data << column_names
+            all.each do |item|
+            data << item.attributes.values_at(*column_names)
+            end
+        end
+    end
 end

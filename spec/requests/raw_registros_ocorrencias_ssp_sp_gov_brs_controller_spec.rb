@@ -1,4 +1,5 @@
 require 'rails_helper'
+require 'active_support'
 
 RSpec.describe RawRegistrosOcorrenciasSspSpGovBrsController, type: :request do
 
@@ -19,7 +20,19 @@ RSpec.describe RawRegistrosOcorrenciasSspSpGovBrsController, type: :request do
         assert data.size > 0
     end
 
-    describe "visit index" do
+    it 'given CSV request, should download list of registers' do
+      get raw_registros_ocorrencias_ssp_sp_gov_brs_url, params: { format: :csv }
+      assert_response :success
+
+      headers = @response.header
+      assert_equal "text/csv", headers['Content-Type']
+      assert_equal "attachment; filename=\"ocorrencias.csv\"; filename*=UTF-8''ocorrencias.csv", headers['Content-Disposition']
+      
+      body = @response.body
+      assert body.include?(@raw_registros_ocorrencias_ssp_sp_gov_br.numero_boletim)
+    end
+
+    describe "visit index with filters" do
 
       raw_registros_ocorrencias_ssp_sp_gov_br_alt = RawRegistrosOcorrenciasSspSpGovBr.create numero_boletim: '4321', dataocorrencia: '19/04/2020', horaocorrencia: '15:30', logradouro: 'Rua Antônio Guerra', numero: 166, bairro: 'Jacarei', cidade: 'Poa', uf: 'RJ', nomepessoa: 'Fedentina de Jesus', rg: '13.036.974-3', nacionalidade: 'Brasileira', sexo: 'Feminino', datanascimento: '20/04/1970', estadocivil: 'Casado', profissao: 'Atendente de loja'
       [
@@ -30,6 +43,18 @@ RSpec.describe RawRegistrosOcorrenciasSspSpGovBrsController, type: :request do
           visit "/raw_registros_ocorrencias_ssp_sp_gov_brs?#{missing_field}=#{@raw_registros_ocorrencias_ssp_sp_gov_br[missing_field]}"
           expect(page).to have_content(@raw_registros_ocorrencias_ssp_sp_gov_br[missing_field]) 
           expect(page).to have_no_content(raw_registros_ocorrencias_ssp_sp_gov_br_alt[missing_field]) 
+        end
+
+        it "given CSV request, should download list of registers filtered by #{missing_field}" do
+          get "/raw_registros_ocorrencias_ssp_sp_gov_brs.csv?#{missing_field}=#{@raw_registros_ocorrencias_ssp_sp_gov_br[missing_field]}"
+          
+          headers = @response.header
+          assert_equal "text/csv", headers['Content-Type']
+          assert_equal "attachment; filename=\"ocorrencias.csv\"; filename*=UTF-8''ocorrencias.csv", headers['Content-Disposition']
+          
+          body = @response.body
+          assert body.include?(@raw_registros_ocorrencias_ssp_sp_gov_br[missing_field])
+          assert body.exclude?(raw_registros_ocorrencias_ssp_sp_gov_br_alt[missing_field])
         end
       end
     end
