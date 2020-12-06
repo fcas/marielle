@@ -29,5 +29,5 @@ end
 Então('deverei ver a página de detalhamento do grupo reflexivo') do
     grupo_reflexivo = RegistrosGruposReflexivo.order("id").last
     id = grupo_reflexivo.id
-    visit('/registros_grupos_reflexivos/' + id)
+    visit('/registros_grupos_reflexivos/' + id.to_s)
 end
