@@ -1,0 +1,1 @@
+json.partial! "registros_grupos_reflexivos/registros_grupos_reflexivos", registros_grupos_reflexivos: @registros_grupos_reflexivos
