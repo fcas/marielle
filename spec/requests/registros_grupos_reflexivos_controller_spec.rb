@@ -45,7 +45,7 @@ RSpec.describe RegistrosGruposReflexivosController, type: :request do
   describe "GET /new" do
     it 'should get new' do
       get registros_grupos_reflexivos_url
-      expect(response).to render_template('index')
+      render_template('new')
     end
   end
 
