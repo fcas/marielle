@@ -1,10 +1,37 @@
+<p id="notice"><%= notice %></p>
 <h1>Grupos de Apoio</h1>
-<table>
-  <% @apoios.each do |apoio| %>
+
+<div class="table">
+
+  <%= link_to 'NOVO REGISTRO', new_apoio_path, class: "btn"%>
+
+  <table>
+    <thead>
     <tr>
-      <td><%= link_to apoio.nomegrupoapoio, apoio_path(apoio) %></td>
-      <td><%= button_to 'Editar', edit_apoio_path(apoio), method: 'get'%></td>
-      <td><%= button_to 'Remover', apoio_path(apoio), method: 'delete', data: { confirm: 'Você tem certeza?' } %></td>
-  <% end %>
-</table>
-<%= link_to "Cadastrar novo grupo de apoio", new_apoio_path %>
+      <th>Nome do grupo de apoio</th>
+      <th>Telefone</th>
+      <th>Logradouro</th>
+      <th>Número</th>
+      <th>Bairro</th>
+      <th>Cidade</th>
+      <th>UF</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <% @apoios.each do |apoio| %>
+      <tr>
+        <td><%= apoio.nomegrupoapoio %></td>
+        <td><%= apoio.telefone %></td>
+        <td><%= apoio.logradouro %></td>
+        <td><%= apoio.numero %></td>
+        <td><%= apoio.bairro %></td>
+        <td><%= apoio.cidade %></td>
+        <td><%= apoio.uf %></td>
+        <td><%= button_to 'Editar', edit_apoio_path(apoio), method: 'get'%></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+
+</div>
