@@ -10,10 +10,34 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_05_002649) do
+ActiveRecord::Schema.define(version: 2020_12_06_223858) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "apoios", force: :cascade do |t|
+    t.string "telefone"
+    t.string "logradouro"
+    t.string "numero"
+    t.string "bairro"
+    t.string "cidade"
+    t.string "uf"
+    t.string "nomegrupoapoio"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "grupo_reflexivos", force: :cascade do |t|
+    t.string "telefone"
+    t.string "logradouro"
+    t.string "numero"
+    t.string "bairro"
+    t.string "cidade"
+    t.string "uf"
+    t.string "nomegruporeflexivo"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "raw_registros_ocorrencias_ssp_sp_gov_brs", force: :cascade do |t|
     t.integer "ano_bo"
