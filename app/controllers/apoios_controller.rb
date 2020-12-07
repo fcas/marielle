@@ -1,6 +1,6 @@
 class ApoiosController < ApplicationController
 
-  before_action :current_apoio, only: [:edit, :update, :destroy]
+  before_action :current_apoio, only: [:show, :edit, :update, :destroy]
 
   def index
     @apoios = Apoio.all
