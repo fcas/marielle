@@ -1,0 +1,30 @@
+<h1>Cadastrar grupo de apoio</h1>
+<div class="form">
+  <div class="form-header">
+  </div>
+  <div class="form-content">
+    <%= form_with model: @apoio do |form| %>
+      <%= form.text_field :nomegrupoapoio, placeholder: "nomegrupoapoio" %>
+      <%= form.text_field :logradouro, placeholder: "logradouro" %>
+      <%= form.text_field :numero, placeholder: "numero" %>
+      <%= form.text_field :bairro, placeholder: "bairro" %>
+      <%= form.text_field :cidade, placeholder: "cidade" %>
+      <%= form.text_field :uf, placeholder: "uf" %>
+      <%= form.text_field :telefone, placeholder: "telefone" %>
+
+      <%= form.submit %>
+    <% end %>
+
+    <!-- <%= form_for @apoio do |form| %>
+  <%= form.text_field :nomegrupoapoio, placeholder: "nomegrupoapoio" %>
+  <%= form.text_field :logradouro, placeholder: "logradouro" %>
+  <%= form.text_field :numero, placeholder: "numero" %>
+  <%= form.text_field :bairro, placeholder: "bairro" %>
+  <%= form.text_field :cidade, placeholder: "cidade" %>
+  <%= form.text_field :uf, placeholder: "uf" %>
+  <%= form.text_field :telefone, placeholder: "telefone" %>
+
+  <%= form.submit %>
+<% end %> -->
+  </div>
+</div>

@@ -1,0 +1,10 @@
+<h1>Grupos de Apoio</h1>
+<table>
+  <% @apoios.each do |apoio| %>
+    <tr>
+      <td><%= link_to apoio.nomegrupoapoio, apoio_path(apoio) %></td>
+      <td><%= button_to 'Editar', edit_apoio_path(apoio), method: 'get'%></td>
+      <td><%= button_to 'Remover', apoio_path(apoio), method: 'delete', data: { confirm: 'Você tem certeza?' } %></td>
+  <% end %>
+</table>
+<%= link_to "Cadastrar novo grupo de apoio", new_apoio_path %>
